@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl dark(Clone)
+Kd 0.245 0.271 0.359
+
+newmtl _defaultMat(Clone)
+Kd 0.939 0.953 1
+
