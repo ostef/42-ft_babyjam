@@ -15,8 +15,14 @@ run/main_scene="uid://daxusf40xmfpa"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Scoring="*res://Global/Scoring.gd"
+
 [display]
 
+window/size/window_width_override=2304
+window/size/window_height_override=1296
 window/vsync/vsync_mode=0
 
 [physics]

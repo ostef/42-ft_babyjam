@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://y6xk74nflxgv"]
+
+[ext_resource type="Script" uid="uid://dja6fe7syixey" path="res://Scenes/best_score.gd" id="1_1sgwc"]
+[ext_resource type="Script" uid="uid://dgjy5601o11tc" path="res://Scenes/ScoreText.gd" id="1_pjk1m"]
+[ext_resource type="Script" uid="uid://b6smqxwi5ndqm" path="res://Test/add_button.gd" id="2_ar76i"]
+[ext_resource type="Script" uid="uid://um833t5fkyrl" path="res://Scenes/mult_label.gd" id="2_cu33k"]
+[ext_resource type="Script" uid="uid://lbnf0nmv502i" path="res://Test/mult_button.gd" id="4_1sgwc"]
+[ext_resource type="Script" uid="uid://d02p7bgg8ex1q" path="res://Test/reset_score.gd" id="5_5xtqs"]
+[ext_resource type="Script" uid="uid://by36jdd1xpnem" path="res://Test/reset_mult.gd" id="6_saj14"]
+
+[node name="GameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="best_score" type="Label" parent="."]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 77.0
+text = "Best Score : 0"
+script = ExtResource("1_1sgwc")
+
+[node name="score_label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 318.0
+offset_bottom = 101.0
+text = "Score : 0"
+script = ExtResource("1_pjk1m")
+
+[node name="mult_label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 318.0
+offset_bottom = 129.0
+text = "Mult 1x"
+script = ExtResource("2_cu33k")
+
+[node name="add" type="Button" parent="."]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 66.0
+offset_bottom = 111.0
+text = "Add"
+script = ExtResource("2_ar76i")
+
+[node name="mult" type="Button" parent="."]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 66.0
+offset_bottom = 146.0
+text = "Mult"
+script = ExtResource("4_1sgwc")
+
+[node name="reset score" type="Button" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 80.0
+offset_right = 181.0
+offset_bottom = 111.0
+text = "reset score"
+script = ExtResource("5_5xtqs")
+
+[node name="reset_mult" type="Button" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 115.0
+offset_right = 180.0
+offset_bottom = 146.0
+text = "reset mult"
+script = ExtResource("6_saj14")
+
+[connection signal="pressed" from="add" to="add" method="_on_pressed"]
+[connection signal="pressed" from="mult" to="mult" method="_on_pressed"]
+[connection signal="pressed" from="reset score" to="reset score" method="_on_pressed"]
+[connection signal="pressed" from="reset_mult" to="reset_mult" method="_on_pressed"]
