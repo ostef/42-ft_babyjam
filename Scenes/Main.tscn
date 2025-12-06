@@ -1,16 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://daxusf40xmfpa"]
+[gd_scene load_steps=6 format=3 uid="uid://daxusf40xmfpa"]
 
 [ext_resource type="PackedScene" uid="uid://y6xk74nflxgv" path="res://Scenes/GameUi.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://c0juyp2qu4f62" path="res://Scenes/Level.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://cymcl0xygwkut" path="res://Scripts/World.gd" id="1_rgh2o"]
-[ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Launcher.gd" id="2_idj7w"]
-[ext_resource type="PackedScene" uid="uid://sk0a6qje1wmd" path="res://Scenes/LaunchedBall.tscn" id="3_kln2b"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_r150o"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_kln2b"]
+[ext_resource type="PackedScene" uid="uid://dkut7gxrojfc3" path="res://Scenes/Ball.tscn" id="3_rgh2o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 
@@ -24,36 +17,14 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 shadow_blur = 1.103
 
-[node name="Ball" type="RigidBody3D" parent="."]
+[node name="Ball" parent="." instance=ExtResource("3_rgh2o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86326, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-shape = SubResource("SphereShape3D_c1w88")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ball/CollisionShape3D"]
-mesh = SubResource("SphereMesh_r150o")
-skeleton = NodePath("../..")
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.8876065, 0.46060258, 0, -0.46060258, 0.8876065, -1.9073486e-06, 5.624366, 20.00241)
+transform = Transform3D(1, 0, 0, 0, 0.43435103, 0.90074384, 0, -0.90074384, 0.43435103, -1.9073486e-06, 17.052105, 12.6784725)
 
 [node name="Level" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 0.7824454, -0.62271965, 0, 0.62271965, 0.7824454, 0, 0, 0)
-
-[node name="LauncherLeft" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.53522277, 1.9495968, 7.450581e-09, -0.21287227, 1.9106805, 0.49582705, 0.2663457, -2.390643, 0.3962812, -6.908495, -6.66636, 10.058053)
-mesh = SubResource("BoxMesh_kln2b")
-script = ExtResource("2_idj7w")
-action_name = "launch_left"
-ball_scene = ExtResource("3_kln2b")
-
-[node name="LauncherRight" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.56289256, -1.6755612, 0, 0.1829509, 2.0094585, 0.49582702, -0.22890826, -2.514234, 0.3962812, 7.2326746, -6.66636, 10.058053)
-mesh = SubResource("BoxMesh_kln2b")
-script = ExtResource("2_idj7w")
-action_name = "launch_right"
-ball_scene = ExtResource("3_kln2b")
+transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768e-05, 0.9737555, 0, 0, 0)
 
 [node name="WorldBounds" type="Area3D" parent="."]
 

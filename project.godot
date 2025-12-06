@@ -26,6 +26,10 @@ window/size/window_width_override=2304
 window/size/window_height_override=1296
 window/vsync/vsync_mode=0
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 launch_left={
