@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://daxusf40xmfpa"]
+[gd_scene load_steps=9 format=3 uid="uid://daxusf40xmfpa"]
 
-[ext_resource type="PackedScene" path="res://Scenes/GameUi.tscn" id="1_idj7w"]
+[ext_resource type="PackedScene" uid="uid://y6xk74nflxgv" path="res://Scenes/GameUi.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://c0juyp2qu4f62" path="res://Scenes/Level.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://cymcl0xygwkut" path="res://Scripts/World.gd" id="1_rgh2o"]
-[ext_resource type="PackedScene" uid="uid://blq66k652l7qo" path="res://Scenes/Launcher.tscn" id="4_v1gob"]
+[ext_resource type="PackedScene" uid="uid://blq66k652l7qo" path="res://Scenes/Canon.tscn" id="4_v1gob"]
+[ext_resource type="PackedScene" uid="uid://b4htoxjcbp8jv" path="res://Scenes/Spring.tscn" id="5_pbw6q"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]
 
@@ -36,7 +37,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 0.43435103, 0.90074384, 0, -0.90074384, 0.43435103, -1.9073486e-06, 17.052105, 12.6784725)
 
 [node name="Level" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 1.0000002, 1.7434362e-05, 0, -1.7434362e-05, 1.0000002, 0, 0, 0)
+transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768e-05, 0.9737555, 0, 0, 0)
 
 [node name="WorldBounds" type="Area3D" parent="."]
 
@@ -45,8 +46,16 @@ transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
 shape = SubResource("BoxShape3D_kln2b")
 
 [node name="Launcher" parent="." instance=ExtResource("4_v1gob")]
-transform = Transform3D(-4.371139e-08, 0.70710677, 0.70710677, -1, -3.090862e-08, -3.090862e-08, 0, -0.70710677, 0.70710677, -7.5850716, 0.43393087, 14.087216)
+transform = Transform3D(0.7071068, 0.7071068, 5.9604645e-08, 1.2802769e-08, 0, 1, 0.7071068, -0.7071068, -2.9802322e-08, -7.5850716, 0.43393087, 14.087216)
 action_name = "launch_left"
 launch_velocity = 18.035
+
+[node name="Launcher2" parent="." instance=ExtResource("4_v1gob")]
+transform = Transform3D(0.7071068, -0.7071067, 0, 1.2802769e-08, 0, 0.99999994, -0.70710677, -0.70710677, -5.9604645e-08, 5.4149284, 0.43393087, 14.087216)
+action_name = "launch_right"
+launch_velocity = 18.035
+
+[node name="Spring" parent="." instance=ExtResource("5_pbw6q")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.1933775, 0.097943515, 14.749972)
 
 [connection signal="body_exited" from="WorldBounds" to="." method="_on_body_exited_world_bounds"]
