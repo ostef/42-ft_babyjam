@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://blq66k652l7qo"]
+
+[ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Launcher.gd" id="1_6tdpc"]
+[ext_resource type="PackedScene" uid="uid://sk0a6qje1wmd" path="res://Scenes/LaunchedBall.tscn" id="2_v4bqi"]
+[ext_resource type="ArrayMesh" uid="uid://1mt5rmg3gat2" path="res://Assets/canon.obj" id="3_v4bqi"]
+
+[node name="Launcher" type="Node3D" node_paths=PackedStringArray("launch_point")]
+script = ExtResource("1_6tdpc")
+ball_scene = ExtResource("2_v4bqi")
+launch_point = NodePath("LaunchPoint")
+
+[node name="LaunchPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4888506, 0)
+
+[node name="Canon" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.060397, 0)
+mesh = ExtResource("3_v4bqi")
