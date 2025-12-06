@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://daxusf40xmfpa"]
+[gd_scene load_steps=9 format=3 uid="uid://daxusf40xmfpa"]
 
 [ext_resource type="PackedScene" uid="uid://c0juyp2qu4f62" path="res://Scenes/Level.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://cymcl0xygwkut" path="res://Scripts/World.gd" id="1_rgh2o"]
 [ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Launcher.gd" id="2_idj7w"]
 [ext_resource type="PackedScene" uid="uid://sk0a6qje1wmd" path="res://Scenes/LaunchedBall.tscn" id="3_kln2b"]
 
@@ -13,6 +14,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_rgh2o")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -55,3 +57,5 @@ ball_scene = ExtResource("3_kln2b")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldBounds"]
 transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
 shape = SubResource("BoxShape3D_kln2b")
+
+[connection signal="body_exited" from="WorldBounds" to="." method="_on_body_exited_world_bounds"]
