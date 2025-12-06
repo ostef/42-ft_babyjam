@@ -8,13 +8,15 @@
 [node name="Canon" type="Node3D" node_paths=PackedStringArray("launch_point")]
 script = ExtResource("1_6tdpc")
 ball_scene = ExtResource("2_v4bqi")
-launch_point = NodePath("LaunchPoint")
-
-[node name="LaunchPoint" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3321507, 0)
+launch_point = NodePath("Canon/LaunchPoint")
+launch_velocity = 15.0
 
 [node name="Canon" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9988592, -0.047751497, 0, 0.047751497, 0.9988592, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
+
+[node name="LaunchPoint" type="Node3D" parent="Canon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3321507, 0)
 
 [node name="Stand" type="MeshInstance3D" parent="."]
 mesh = ExtResource("4_prjab")

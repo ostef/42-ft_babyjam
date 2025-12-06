@@ -7,6 +7,7 @@
 radius = 0.33238783
 
 [node name="Barrel" type="RigidBody3D"]
+continuous_cd = true
 script = ExtResource("1_rfot1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
