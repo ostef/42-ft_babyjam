@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://catrevey4mmeo"]
+[gd_scene load_steps=7 format=3 uid="uid://catrevey4mmeo"]
 
 [ext_resource type="Script" uid="uid://belsv2ndmtpq7" path="res://Scripts/Barrel.gd" id="1_rfot1"]
 [ext_resource type="PackedScene" uid="uid://ddl2u52th0ebh" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/explosions/explosion_heavy.tscn" id="2_a0v44"]
 [ext_resource type="ArrayMesh" uid="uid://ekp1hil8qad7" path="res://Assets/Handmade/Barrel.obj" id="2_ayvs4"]
+[ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="4_x12qv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]
 radius = 0.33238783
@@ -23,6 +24,7 @@ shape = SubResource("SphereShape3D_c1w88")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 mesh = ExtResource("2_ayvs4")
+surface_material_override/1 = ExtResource("4_x12qv")
 
 [node name="ExplosionRadius" type="Area3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

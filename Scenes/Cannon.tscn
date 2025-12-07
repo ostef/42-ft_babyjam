@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyg2xat68hlsg"]
+[gd_scene load_steps=8 format=3 uid="uid://dyg2xat68hlsg"]
 
 [ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Cannon.gd" id="1_6tdpc"]
 [ext_resource type="PackedScene" uid="uid://catrevey4mmeo" path="res://Scenes/Barrel.tscn" id="2_v4bqi"]
 [ext_resource type="ArrayMesh" uid="uid://bfndio66xmylh" path="res://Assets/Handmade/Canon.obj" id="3_4l5vp"]
 [ext_resource type="ArrayMesh" uid="uid://csqp1v4g8a0xi" path="res://Assets/Handmade/CanonStand.obj" id="4_prjab"]
 [ext_resource type="Texture2D" uid="uid://dntqwhqp4l8uo" path="res://Assets/canon_bar.png" id="5_4bh85"]
+[ext_resource type="PackedScene" uid="uid://c76ggriths1rd" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/explosions/explosion_light.tscn" id="6_w04vy"]
+[ext_resource type="PackedScene" uid="uid://b811lwp060mex" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/muzzle_flash/muzzle_flash_1.tscn" id="7_bcdaw"]
 
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
 script = ExtResource("1_6tdpc")
@@ -43,3 +45,9 @@ texture_under = ExtResource("5_4bh85")
 texture_progress = ExtResource("5_4bh85")
 tint_under = Color(0.609943, 0, 0.19510154, 1)
 tint_progress = Color(0.3372549, 0.7254902, 0.3372549, 1)
+
+[node name="ExplosionLight" parent="." instance=ExtResource("6_w04vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5816405, 0.0827111)
+
+[node name="MuzzleFlash_1" parent="." instance=ExtResource("7_bcdaw")]
+transform = Transform3D(0.0143726, 0, 1.9999082, 0, 2, 0, -1.4999311, 0, 0.019163467, 0, 0.35494328, -1.5428975)

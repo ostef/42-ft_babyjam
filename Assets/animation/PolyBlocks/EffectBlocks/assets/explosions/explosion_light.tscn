@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=4 uid="uid://c76ggriths1rd"]
 
-[ext_resource type="Script" uid="uid://bo48xaos6vsgm" path="res://PolyBlocks/EffectBlocks/source_files/scripts/explosion_light.gd" id="1_b76o4"]
-[ext_resource type="AudioStream" uid="uid://g2cyhbgkp3gl" path="res://PolyBlocks/EffectBlocks/source_files/audio/small_explosion.wav" id="2_1s72p"]
+[ext_resource type="Script" uid="uid://bo48xaos6vsgm" path="res://Assets/animation/PolyBlocks/EffectBlocks/source_files/scripts/explosion_light.gd" id="1_b76o4"]
+[ext_resource type="AudioStream" uid="uid://g2cyhbgkp3gl" path="res://Assets/animation/PolyBlocks/EffectBlocks/source_files/audio/small_explosion.wav" id="2_1s72p"]
 
 [sub_resource type="Curve" id="Curve_4o2wr"]
 _data = [Vector2(0.126866, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0432777), 0.0, 0.0, 0, 0]
@@ -215,7 +215,6 @@ shadow_mesh = SubResource("ArrayMesh_jupgj")
 
 [node name="ExplosionLight" type="Node3D"]
 script = ExtResource("1_b76o4")
-auto_animate = true
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 emitting = false
