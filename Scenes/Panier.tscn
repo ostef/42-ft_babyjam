@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://m57t37r5oyf8"]
+[gd_scene load_steps=6 format=3 uid="uid://m57t37r5oyf8"]
 
+[ext_resource type="Script" uid="uid://cywq1myxgl3gw" path="res://Scenes/panier.gd" id="1_4c5b2"]
 [ext_resource type="ArrayMesh" uid="uid://vy67h28r633u" path="res://Assets/panier.obj" id="1_mkuru"]
 [ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="2_4c5b2"]
 
@@ -10,6 +11,7 @@ data = PackedVector3Array(0.099199995, 3.0338, -0.80039996, 0.0958, 2.9966998, -
 height = 0.1015625
 
 [node name="Panier" type="Area3D"]
+script = ExtResource("1_4c5b2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_mkuru")
@@ -21,5 +23,7 @@ shape = SubResource("ConcavePolygonShape3D_mkuru")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0617223, 0.29038477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7539847, 0.24163246)
 shape = SubResource("CylinderShape3D_4c5b2")
+
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
