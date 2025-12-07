@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b811lwp060mex" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/muzzle_flash/muzzle_flash_1.tscn" id="7_bcdaw"]
 
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
+visible = false
 script = ExtResource("1_6tdpc")
 ball_scene = ExtResource("2_v4bqi")
 launch_point = NodePath("Stand/Canon/LaunchPoint")
