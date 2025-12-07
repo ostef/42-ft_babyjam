@@ -40,3 +40,7 @@ libraries = {
 [node name="HingeJoint3D" type="HingeJoint3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 node_b = NodePath("../RigidBody3D")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true

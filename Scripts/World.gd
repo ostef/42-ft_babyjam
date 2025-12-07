@@ -6,7 +6,7 @@ extends Node
 func _physics_process(_delta: float) -> void:
 	var bodies = world_bounds.get_overlapping_bodies()
 	for body in bodies:
-		if body is RigidBody3D and body != self:
+		if body is RigidBody3D:
 			body.apply_force(Vector3(0,0,wind_force))
 
 func _on_body_exited_world_bounds(body: Node3D):

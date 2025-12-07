@@ -8,7 +8,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 
-[node name="Node3D" type="Node3D"]
+[node name="World" type="Node3D"]
 script = ExtResource("1_rgh2o")
 
 [node name="GameUi" parent="." instance=ExtResource("1_idj7w")]
@@ -31,9 +31,9 @@ transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
 shape = SubResource("BoxShape3D_kln2b")
 
 [node name="Jumper" parent="." instance=ExtResource("4_rgh2o")]
-transform = Transform3D(1.710554, 0, 0, 0, 1, 0, 0, 0, 1.7287021, -4.5258417, 0.09122205, 5.406265)
+transform = Transform3D(1.710554, 0, 0, 0, 1, 0, 0, 0, 1.7287021, 0, 0.091, 6.525)
 
 [node name="Ball" parent="." instance=ExtResource("3_rgh2o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.176279, 3.1401062, 3.1460285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19717693, 1.0542436, 4.7519984)
 
 [connection signal="body_exited" from="WorldBounds" to="." method="_on_body_exited_world_bounds"]
