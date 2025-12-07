@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dyg2xat68hlsg"]
+[gd_scene load_steps=12 format=3 uid="uid://dyg2xat68hlsg"]
 
 [ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Cannon.gd" id="1_6tdpc"]
 [ext_resource type="PackedScene" uid="uid://catrevey4mmeo" path="res://Scenes/Barrel.tscn" id="2_v4bqi"]
 [ext_resource type="ArrayMesh" uid="uid://bfndio66xmylh" path="res://Assets/Handmade/Canon.obj" id="3_4l5vp"]
+[ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="4_bcdaw"]
 [ext_resource type="ArrayMesh" uid="uid://csqp1v4g8a0xi" path="res://Assets/Handmade/CanonStand.obj" id="4_prjab"]
 [ext_resource type="Texture2D" uid="uid://dntqwhqp4l8uo" path="res://Assets/canon_bar.png" id="5_4bh85"]
 [ext_resource type="PackedScene" uid="uid://c76ggriths1rd" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/explosions/explosion_light.tscn" id="6_w04vy"]
@@ -77,11 +78,13 @@ launch_velocity = 15.0
 [node name="Stand" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.307658, 0)
 mesh = ExtResource("4_prjab")
+surface_material_override/0 = ExtResource("4_bcdaw")
 
 [node name="Canon" type="MeshInstance3D" parent="Stand"]
-transform = Transform3D(1, 0, 0, 0, 0.9988591, -0.04775149, 0, 0.04775149, 0.9988591, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99885905, -0.04775149, 0, 0.04775149, 0.99885905, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
+surface_material_override/1 = ExtResource("4_bcdaw")
 
 [node name="LaunchPoint" type="Node3D" parent="Stand/Canon"]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.8214301, 0.024415493)
