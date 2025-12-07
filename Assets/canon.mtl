@@ -1,8 +1,12 @@
-# Created by Kenney (www.kenney.nl)
+# Blender 4.5.2 LTS MTL File: 'Assets.blend'
+# www.blender.org
 
-newmtl dark(Clone)
-Kd 0.245 0.271 0.359
-
-newmtl _defaultMat(Clone)
-Kd 0.939 0.953 1
-
+newmtl Metal
+Ns 86.230797
+Ka 1.000000 1.000000 1.000000
+Kd 0.006304 0.001319 0.011246
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
