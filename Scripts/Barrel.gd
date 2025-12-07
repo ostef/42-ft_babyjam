@@ -1,11 +1,7 @@
 extends RigidBody3D
 
-@export var wind_force = 10.0
 @export var explosion_force = 15.0
 @onready var explosion_radius = $ExplosionRadius
-
-func _physics_process(_delta: float) -> void:
-	apply_force(Vector3(0,0,wind_force))
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("explosion"):
