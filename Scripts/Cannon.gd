@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 		inst.global_position = launch_point.global_position
 		inst.global_rotation = launch_point.global_rotation
 		inst.set_linear_velocity(-transform.basis.z * launch_velocity)
+
 	handle_cooldown(delta)
 
 func handle_cooldown(delta):

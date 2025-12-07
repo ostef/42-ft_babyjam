@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
 [ext_resource type="ArrayMesh" uid="uid://cuyhrsf4m7wmt" path="res://Assets/bato.obj" id="5_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://dkut7gxrojfc3" path="res://Scenes/Ball.tscn" id="5_xylue"]
+[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c1w88"]
 
@@ -74,9 +74,6 @@ action_name = "launch_left"
 [node name="CannonRight" parent="." instance=ExtResource("2_8rbpu")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 6, -0.00015690923, 9)
 action_name = "launch_right"
-
-[node name="Ball2" parent="." instance=ExtResource("5_xylue")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.362004, 3.7243595, -2.5152316)
 
 [node name="Ramp" parent="." instance=ExtResource("4_fuudy")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 15.336541, 1.60392e-05, -0.9199765)
