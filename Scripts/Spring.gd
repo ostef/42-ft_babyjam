@@ -8,7 +8,9 @@ var spring_load: float
 @export var ball_scene: PackedScene
 @export var ball_spawn_point: Node3D
 var current_ball: RigidBody3D
-@export var push_force = 20.0
+
+@export var push_min_force = 1.0
+@export var push_max_force = 20.0
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("spring"):
@@ -25,7 +27,8 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_released("spring"):
 		if current_ball:
-			current_ball.set_linear_velocity(basis.y * push_force * spring_load)
+			var force_t = inverse_lerp(spring_load_min, 1, spring_load)
+			current_ball.set_linear_velocity(basis.y * lerp(push_min_force, push_max_force, force_t))
 			current_ball = null
 		
 		animation_player.play("SpringRelease")
