@@ -9,6 +9,5 @@ func _on_body_entered(body: Node3D) -> void:
 		normal.y = 0;
 		normal = normal.normalized()
 		body.set_linear_velocity(normal * power)
-		Scoring.add_score(score)
 		if body is Ball:
 			Scoring.add_score(score)
