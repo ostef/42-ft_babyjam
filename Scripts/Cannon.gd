@@ -2,7 +2,7 @@ extends Node3D
 
 @export var cooldown_bar_position: Vector3 = Vector3(10, -50, 0)
 @onready var progress_bar = $cooldown_bar
-@export var cooldown_time: float = 2.0
+@export var cooldown_time: float = 3.0
 var current_time: float = 0.0
 var is_on_cooldown: bool = false
 

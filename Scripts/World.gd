@@ -1,9 +1,9 @@
 extends Node
 
-@export var wind_force = 10.0
+@export var wind_force = 5.0
 @onready var world_bounds = $WorldBounds
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var bodies = world_bounds.get_overlapping_bodies()
 	for body in bodies:
 		if body is RigidBody3D and body != self:
