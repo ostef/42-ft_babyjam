@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://5j8sfpbowqbv"]
+
+[ext_resource type="Script" uid="uid://ci8oiu53mwapj" path="res://Scripts/Jumper.gd" id="1_do4k8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_do4k8"]
+size = Vector3(1, 0.111206055, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7iy36"]
+
+[sub_resource type="Animation" id="Animation_do4k8"]
+resource_name = "JumperActivate"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uo68r"]
+_data = {
+&"JumperActivate": SubResource("Animation_do4k8")
+}
+
+[node name="Jumper" type="Node3D"]
+script = ExtResource("1_do4k8")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5285175)
+mass = 10.0
+continuous_cd = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.066, 0)
+shape = SubResource("BoxShape3D_do4k8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.11, 0, 0, 0, 1, 0, 0.067, 0)
+mesh = SubResource("BoxMesh_7iy36")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_uo68r")
+}
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+node_b = NodePath("../RigidBody3D")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=11 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
 [ext_resource type="Script" uid="uid://c8qvkvi6s3p5k" path="res://Scenes/KillZone.gd" id="5_ienac"]
 [ext_resource type="PackedScene" uid="uid://c682e8w5wnvma" path="res://Scenes/bato.tscn" id="5_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
@@ -33,16 +32,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 1.7434359e-05, 0, -1.7434359e-05, 1, 0, 0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ienac")
 
-[node name="Ball" parent="." instance=ExtResource("5_xylue")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0.6160721, 0.45014703, 0.49435636)
-
 [node name="CannonLeft" parent="." instance=ExtResource("2_8rbpu")]
 transform = Transform3D(0.70710677, 0, -0.70710677, -1.2327953e-05, 1, -1.2327953e-05, 0.70710677, 1.7434359e-05, 0.70710677, -4.0921555, 0.7678368, 13.032757)
+cooldown_time = 2.0
 action_name = "launch_left"
 launch_velocity = 12.0
 
 [node name="CannonRight" parent="." instance=ExtResource("2_8rbpu")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 4.0379715, 0.7096162, 12.911532)
+cooldown_time = 2.0
 action_name = "launch_right"
 launch_velocity = 12.0
 
