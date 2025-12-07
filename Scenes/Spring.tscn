@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4htoxjcbp8jv"]
+[gd_scene load_steps=9 format=3 uid="uid://b4htoxjcbp8jv"]
 
 [ext_resource type="ArrayMesh" uid="uid://bntqxw1sqs0sx" path="res://Assets/Handmade/Spring.obj" id="1_21e6f"]
 [ext_resource type="Script" uid="uid://bsdkeo3s1lwyq" path="res://Scripts/Spring.gd" id="1_r7xtq"]
 [ext_resource type="ArrayMesh" uid="uid://dyhsh5j32fv57" path="res://Assets/Handmade/SpringTop.obj" id="2_r7xtq"]
+[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="2_y4tom"]
 
 [sub_resource type="Animation" id="Animation_y5o67"]
 length = 0.001
@@ -92,8 +93,11 @@ _data = {
 &"SpringRelease": SubResource("Animation_7c8ih")
 }
 
-[node name="Spring" type="Node3D"]
+[node name="Spring" type="Node3D" node_paths=PackedStringArray("ball_spawn_point")]
 script = ExtResource("1_r7xtq")
+spring_load_min = 0.7
+ball_scene = ExtResource("2_y4tom")
+ball_spawn_point = NodePath("BallSpawnPoint")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -106,3 +110,6 @@ mesh = ExtResource("1_21e6f")
 [node name="SpringTopMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5299939, 0)
 mesh = ExtResource("2_r7xtq")
+
+[node name="BallSpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2514558, 0)

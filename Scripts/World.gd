@@ -11,5 +11,4 @@ func _physics_process(_delta: float) -> void:
 
 func _on_body_exited_world_bounds(body: Node3D):
 	if body is RigidBody3D:
-		print("Freeing ", body)
 		body.queue_free()
