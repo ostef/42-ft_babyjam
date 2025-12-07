@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://m57t37r5oyf8" path="res://Scenes/Panier.tscn" id="6_or7tv"]
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
-[ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="7_nrlyp"]
 [ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
 [ext_resource type="PackedScene" uid="uid://cvryhi7q76aqn" path="res://Scenes/RodBumper.tscn" id="9_esopp"]
 
@@ -29,6 +28,13 @@ sky = SubResource("Sky_tj5wv")
 tonemap_mode = 2
 glow_enabled = true
 glow_bloom = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhlu0"]
+transparency = 1
+albedo_color = Color(0.27450982, 0.13333334, 0.12941177, 0.5921569)
+emission_enabled = true
+emission = Color(0.37876213, 0.009537908, 0.10132914, 1)
+emission_energy_multiplier = 5.0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_44tr1"]
 data = PackedVector3Array(4.3378997, 0, -3.2308, 0, 0, 0.29009998, -4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, 0, -3.054, 0.29009998, 4.3378997, -3.054, -3.2308, 0, -3.054, 0.29009998, 0, 0, 0.29009998, 4.3378997, -3.054, -3.2308, 4.3378997, -3.054, -3.2308, 0, 0, 0.29009998, 4.3378997, 0, -3.2308, 4.3378997, -3.054, -3.2308, 4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, -4.3378997, -3.054, -3.2308, 4.3378997, 0, -3.2308, -4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, -4.3378997, 0, -3.2308, 0, -3.054, 0.29009998, 0, -3.054, 0.29009998, -4.3378997, 0, -3.2308, 0, 0, 0.29009998)
@@ -53,7 +59,7 @@ action_name = "launch_right"
 launch_velocity = 12.0
 
 [node name="Ramp" parent="." instance=ExtResource("4_fuudy")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.586913, -1.3489438, -1.3311316)
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.586913, -1.1890393, -1.3311288)
 
 [node name="Bato" parent="." instance=ExtResource("5_tj5wv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, -0.002968073, 8.244635, -0.003096607)
@@ -67,7 +73,7 @@ script = ExtResource("5_ienac")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="KillZone"]
 mesh = ExtResource("6_bktio")
-surface_material_override/0 = ExtResource("7_nrlyp")
+surface_material_override/0 = SubResource("StandardMaterial3D_fhlu0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone"]
 transform = Transform3D(1, 0, 0, 0, 3.36, 0, 0, 0, 1, 0, 7.3223176, 1.4551915e-11)
