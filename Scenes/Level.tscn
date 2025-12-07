@@ -127,6 +127,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 3
 [node name="RodBumper" parent="Bumpers" instance=ExtResource("9_esopp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.342436, -1.1233242e-05, 2.9417522)
 
+[node name="RodBumper6" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.293, -3.7717667)
+
 [node name="RodBumper2" parent="Bumpers" instance=ExtResource("9_esopp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9949026, -2.8158029e-06, 3.0333037)
 
