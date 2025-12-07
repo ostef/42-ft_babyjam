@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyg2xat68hlsg"]
+[gd_scene load_steps=11 format=3 uid="uid://dyg2xat68hlsg"]
 
 [ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Cannon.gd" id="1_6tdpc"]
 [ext_resource type="PackedScene" uid="uid://catrevey4mmeo" path="res://Scenes/Barrel.tscn" id="2_v4bqi"]
@@ -8,8 +8,67 @@
 [ext_resource type="PackedScene" uid="uid://c76ggriths1rd" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/explosions/explosion_light.tscn" id="6_w04vy"]
 [ext_resource type="PackedScene" uid="uid://b811lwp060mex" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/muzzle_flash/muzzle_flash_1.tscn" id="7_bcdaw"]
 
+[sub_resource type="Animation" id="Animation_w04vy"]
+resource_name = "CannonShoot"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.5),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Vector3(0, 0.307658, 0), Vector3(0, 0.307658, 0.3787495), Vector3(0, 0.307658, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stand/Canon:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6),
+"transitions": PackedFloat32Array(1, -0.5, 1),
+"update": 0,
+"values": [Vector3(0.047769662, 0, 0), Vector3(0.53171456, 0, 0), Vector3(0.047769662, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bcdaw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.307658, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stand/Canon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.047769662, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e51aa"]
+_data = {
+&"CannonShoot": SubResource("Animation_w04vy"),
+&"RESET": SubResource("Animation_bcdaw")
+}
+
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
-visible = false
 script = ExtResource("1_6tdpc")
 ball_scene = ExtResource("2_v4bqi")
 launch_point = NodePath("Stand/Canon/LaunchPoint")
@@ -20,12 +79,15 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 mesh = ExtResource("4_prjab")
 
 [node name="Canon" type="MeshInstance3D" parent="Stand"]
-transform = Transform3D(1, 0, 0, 0, 0.9988592, -0.047751497, 0, 0.047751497, 0.9988592, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9988591, -0.04775149, 0, 0.04775149, 0.9988591, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
 
 [node name="LaunchPoint" type="Node3D" parent="Stand/Canon"]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.8214301, 0.024415493)
+
+[node name="ExplosionLight" parent="Stand/Canon" instance=ExtResource("6_w04vy")]
+transform = Transform3D(1, 0, 0, 0, 0.04775148, -0.9988596, 0, 0.9988596, 0.04775148, 0, -0.48624998, 0.067880124)
 
 [node name="cooldown_bar" type="TextureProgressBar" parent="."]
 anchors_preset = 8
@@ -47,8 +109,10 @@ texture_progress = ExtResource("5_4bh85")
 tint_under = Color(0.609943, 0, 0.19510154, 1)
 tint_progress = Color(0.3372549, 0.7254902, 0.3372549, 1)
 
-[node name="ExplosionLight" parent="." instance=ExtResource("6_w04vy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5816405, 0.0827111)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e51aa")
+}
 
 [node name="MuzzleFlash_1" parent="." instance=ExtResource("7_bcdaw")]
-transform = Transform3D(0.0143726, 0, 1.9999082, 0, 2, 0, -1.4999311, 0, 0.019163467, 0, 0.35494328, -1.5428975)
+transform = Transform3D(0.0143726, 0, 1.9999082, 0, 1.9999999, 0, -1.499931, -7.450581e-09, 0.019163467, 0, 0.35494328, -1.5428975)

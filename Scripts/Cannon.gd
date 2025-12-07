@@ -2,8 +2,9 @@ extends Node3D
 
 @export var cooldown_bar_position: Vector3 = Vector3(10, -50, 0)
 @onready var progress_bar = $cooldown_bar
-@onready var explosion = $ExplosionLight
+@onready var explosion = $Stand/Canon/ExplosionLight
 @onready var muzzle = $MuzzleFlash_1
+@onready var animation_player = $AnimationPlayer
 @export var cooldown_time: float = 3.0
 var current_time: float = 0.0
 var is_on_cooldown: bool = false
@@ -30,8 +31,10 @@ func _process(delta: float) -> void:
 		inst.global_position = launch_point.global_position
 		inst.global_rotation = launch_point.global_rotation
 		inst.set_linear_velocity(-transform.basis.z * launch_velocity)
+		
 		muzzle.muzzle_flash()
 		explosion.explosion()
+		animation_player.play("CannonShoot")
 
 	handle_cooldown(delta)
 
