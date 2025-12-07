@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://li5cyk5u3u4y"
-path="res://.godot/imported/support-four-top-double.fbx-7d615d068098a7a910310665c352ecde.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-four-top-double.fbx"
-dest_files=["res://.godot/imported/support-four-top-double.fbx-7d615d068098a7a910310665c352ecde.scn"]
 
 [params]
 

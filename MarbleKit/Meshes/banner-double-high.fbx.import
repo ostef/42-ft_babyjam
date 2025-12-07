@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bjc53oclq243f"
-path="res://.godot/imported/banner-double-high.fbx-c451b8ab93921bb1600e6ada2aa989f6.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/banner-double-high.fbx"
-dest_files=["res://.godot/imported/banner-double-high.fbx-c451b8ab93921bb1600e6ada2aa989f6.scn"]
 
 [params]
 

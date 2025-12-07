@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhwgljyaqkc5g"
-path="res://.godot/imported/wave-c.fbx-bef6ff4433b975d5d4e2f5b4ac70d18d.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/wave-c.fbx"
-dest_files=["res://.godot/imported/wave-c.fbx-bef6ff4433b975d5d4e2f5b4ac70d18d.scn"]
 
 [params]
 

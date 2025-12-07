@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d07n6mwwae1wi"
-path="res://.godot/imported/fan-two.fbx-cdc2e87281aa3d3f08a59e325b850b99.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/fan-two.fbx"
-dest_files=["res://.godot/imported/fan-two.fbx-cdc2e87281aa3d3f08a59e325b850b99.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crrrpmnksssbo"
-path="res://.godot/imported/support-color-four-bottom.fbx-f05d6115f471444f19126b0404568793.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-color-four-bottom.fbx"
-dest_files=["res://.godot/imported/support-color-four-bottom.fbx-f05d6115f471444f19126b0404568793.scn"]
 
 [params]
 

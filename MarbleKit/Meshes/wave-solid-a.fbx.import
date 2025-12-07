@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d0v8qtytyqdqw"
-path="res://.godot/imported/wave-solid-a.fbx-625c8a23ca1d045b6a4d6ccafc3ed674.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/wave-solid-a.fbx"
-dest_files=["res://.godot/imported/wave-solid-a.fbx-625c8a23ca1d045b6a4d6ccafc3ed674.scn"]
 
 [params]
 

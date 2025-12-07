@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bng1kqstj4k0i"
-path="res://.godot/imported/end-hole-square.fbx-f3284e1277c45a2702814c4722ddb7f4.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/end-hole-square.fbx"
-dest_files=["res://.godot/imported/end-hole-square.fbx-f3284e1277c45a2702814c4722ddb7f4.scn"]
 
 [params]
 

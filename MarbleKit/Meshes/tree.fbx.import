@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bl4pe5nn8drvv"
-path="res://.godot/imported/tree.fbx-43eaed0f68a3e73a960725be7c16fcd4.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/tree.fbx"
-dest_files=["res://.godot/imported/tree.fbx-43eaed0f68a3e73a960725be7c16fcd4.scn"]
 
 [params]
 

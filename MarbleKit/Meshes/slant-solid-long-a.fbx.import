@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cankf80j84mvg"
-path="res://.godot/imported/slant-solid-long-a.fbx-599132f0648e78e1c6cb376e4da7466e.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/slant-solid-long-a.fbx"
-dest_files=["res://.godot/imported/slant-solid-long-a.fbx-599132f0648e78e1c6cb376e4da7466e.scn"]
 
 [params]
 

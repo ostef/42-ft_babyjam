@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cip8fkc82u5vd"
-path="res://.godot/imported/support-color-four-middle.fbx-ec5c6927003997acca88ce46449351a8.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-color-four-middle.fbx"
-dest_files=["res://.godot/imported/support-color-four-middle.fbx-ec5c6927003997acca88ce46449351a8.scn"]
 
 [params]
 

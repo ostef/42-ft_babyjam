@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bh0hgu3y01axy"
-path="res://.godot/imported/support-two-middle.fbx-d8b18efd2d993cabc95bc7e5c4bb6ea3.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-two-middle.fbx"
-dest_files=["res://.godot/imported/support-two-middle.fbx-d8b18efd2d993cabc95bc7e5c4bb6ea3.scn"]
 
 [params]
 

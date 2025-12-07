@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://esp6n7dr4for"
-path="res://.godot/imported/tree-tall-large.fbx-093b2d79d841118059419410e28eb44b.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/tree-tall-large.fbx"
-dest_files=["res://.godot/imported/tree-tall-large.fbx-093b2d79d841118059419410e28eb44b.scn"]
 
 [params]
 

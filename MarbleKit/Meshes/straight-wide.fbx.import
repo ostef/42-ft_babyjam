@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c8aiy8ikw646i"
-path="res://.godot/imported/straight-wide.fbx-715fe470b0970ded4106d1a6bfde18c0.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/straight-wide.fbx"
-dest_files=["res://.godot/imported/straight-wide.fbx-715fe470b0970ded4106d1a6bfde18c0.scn"]
 
 [params]
 

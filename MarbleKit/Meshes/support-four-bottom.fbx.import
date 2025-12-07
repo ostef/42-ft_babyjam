@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cky5kw4y37rd2"
-path="res://.godot/imported/support-four-bottom.fbx-a3f40ed9b8cc3e0b65f875cbbe233d83.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-four-bottom.fbx"
-dest_files=["res://.godot/imported/support-four-bottom.fbx-a3f40ed9b8cc3e0b65f875cbbe233d83.scn"]
 
 [params]
 

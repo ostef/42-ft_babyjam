@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dgwixomynti7k"
-path="res://.godot/imported/split-double-sides.fbx-a4d82fd000e8745c58582a0a38e18e6f.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/split-double-sides.fbx"
-dest_files=["res://.godot/imported/split-double-sides.fbx-a4d82fd000e8745c58582a0a38e18e6f.scn"]
 
 [params]
 

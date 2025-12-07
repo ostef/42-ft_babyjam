@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxrh3j6xsmsrn"
-path="res://.godot/imported/support-color-two-bottom.fbx-f913cea3b3a36a1bb296cdb5b8f3ea5b.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-color-two-bottom.fbx"
-dest_files=["res://.godot/imported/support-color-two-bottom.fbx-f913cea3b3a36a1bb296cdb5b8f3ea5b.scn"]
 
 [params]
 

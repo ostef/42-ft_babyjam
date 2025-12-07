@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://y7fwbdyo5qng"
-path="res://.godot/imported/bump-d.fbx-e300228ddb2e96bf42ad2d18693a0610.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/bump-d.fbx"
-dest_files=["res://.godot/imported/bump-d.fbx-e300228ddb2e96bf42ad2d18693a0610.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brqha8cgi5tes"
-path="res://.godot/imported/end-hole-rounded.fbx-e27474d5c572ca971ce95163e894e564.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/end-hole-rounded.fbx"
-dest_files=["res://.godot/imported/end-hole-rounded.fbx-e27474d5c572ca971ce95163e894e564.scn"]
 
 [params]
 

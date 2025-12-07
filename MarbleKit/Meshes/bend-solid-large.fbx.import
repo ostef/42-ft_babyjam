@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://fdhjyl7w55ph"
-path="res://.godot/imported/bend-solid-large.fbx-cd771dc550d75375b8f40d8c7f0df3f9.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/bend-solid-large.fbx"
-dest_files=["res://.godot/imported/bend-solid-large.fbx-cd771dc550d75375b8f40d8c7f0df3f9.scn"]
 
 [params]
 

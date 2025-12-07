@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfpaonpg7yo7y"
-path="res://.godot/imported/support-single-bottom.fbx-38533c5c25f0e106e422e1ed4dc7da50.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-single-bottom.fbx"
-dest_files=["res://.godot/imported/support-single-bottom.fbx-38533c5c25f0e106e422e1ed4dc7da50.scn"]
 
 [params]
 

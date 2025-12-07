@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://digeq06hmaj8h"
-path="res://.godot/imported/straight-hole.fbx-e72bb1cfda51a1a3f5dc5f4d01fac467.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/straight-hole.fbx"
-dest_files=["res://.godot/imported/straight-hole.fbx-e72bb1cfda51a1a3f5dc5f4d01fac467.scn"]
 
 [params]
 

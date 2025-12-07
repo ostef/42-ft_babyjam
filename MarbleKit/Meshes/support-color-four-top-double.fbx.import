@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://p7w288p8enyr"
-path="res://.godot/imported/support-color-four-top-double.fbx-5f3ec71a3dbab60632ede116106314a5.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-color-four-top-double.fbx"
-dest_files=["res://.godot/imported/support-color-four-top-double.fbx-5f3ec71a3dbab60632ede116106314a5.scn"]
 
 [params]
 

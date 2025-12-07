@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://5bkc8un334sa"
-path="res://.godot/imported/funnel-long.fbx-13cc2652f1e148afc7d21f79b7a44393.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/funnel-long.fbx"
-dest_files=["res://.godot/imported/funnel-long.fbx-13cc2652f1e148afc7d21f79b7a44393.scn"]
 
 [params]
 

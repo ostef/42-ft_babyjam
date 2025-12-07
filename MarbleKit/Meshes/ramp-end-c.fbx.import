@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ddpbcl0hs8y1v"
-path="res://.godot/imported/ramp-end-c.fbx-c677bed445df1177fd4ac50590d59c75.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/ramp-end-c.fbx"
-dest_files=["res://.godot/imported/ramp-end-c.fbx-c677bed445df1177fd4ac50590d59c75.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dklwv5gavjy56"
-path="res://.godot/imported/curve-solid-large.fbx-fd96c18c73aabbe68a511f1b87613ae3.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/curve-solid-large.fbx"
-dest_files=["res://.godot/imported/curve-solid-large.fbx-fd96c18c73aabbe68a511f1b87613ae3.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxmpkiaoxrnyq"
-path="res://.godot/imported/helix-large-quarter-right.fbx-cbb650d3f1f912e03974aa3b96e04128.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/helix-large-quarter-right.fbx"
-dest_files=["res://.godot/imported/helix-large-quarter-right.fbx-cbb650d3f1f912e03974aa3b96e04128.scn"]
 
 [params]
 

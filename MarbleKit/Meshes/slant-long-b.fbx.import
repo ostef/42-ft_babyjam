@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1xmt8rs8cc3f"
-path="res://.godot/imported/slant-long-b.fbx-5868a349619afe8d586fa0065493002e.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/slant-long-b.fbx"
-dest_files=["res://.godot/imported/slant-long-b.fbx-5868a349619afe8d586fa0065493002e.scn"]
 
 [params]
 

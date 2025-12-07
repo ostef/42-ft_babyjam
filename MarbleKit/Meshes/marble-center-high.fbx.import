@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cah75n88daiop"
-path="res://.godot/imported/marble-center-high.fbx-bdf0bfc9be81ec252e15ce589d76308f.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/marble-center-high.fbx"
-dest_files=["res://.godot/imported/marble-center-high.fbx-bdf0bfc9be81ec252e15ce589d76308f.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dgycq46wa01qe"
-path="res://.godot/imported/helix-half-left.fbx-837efe7c044ed605ef47e02ded78d661.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/helix-half-left.fbx"
-dest_files=["res://.godot/imported/helix-half-left.fbx-837efe7c044ed605ef47e02ded78d661.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bt7da3fkj01lm"
-path="res://.godot/imported/curve-wide-medium.fbx-26a58ae778ace60752bcfa196191ffe1.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/curve-wide-medium.fbx"
-dest_files=["res://.godot/imported/curve-wide-medium.fbx-26a58ae778ace60752bcfa196191ffe1.scn"]
 
 [params]
 

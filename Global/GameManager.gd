@@ -9,7 +9,8 @@ var ball_in_level := 0
 var ball_in_stock := 3
 var state : State = State.PLAYING
 
-func _ready() -> void: 
+func _ready() -> void:
+	pass
 	
 
 func end_game():

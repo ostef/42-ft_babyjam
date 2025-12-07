@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cky0yej8mhjsn"
-path="res://.godot/imported/s-curve-right.fbx-e1f5e91ab499c488c9c84acfc0913f6e.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/s-curve-right.fbx"
-dest_files=["res://.godot/imported/s-curve-right.fbx-e1f5e91ab499c488c9c84acfc0913f6e.scn"]
 
 [params]
 

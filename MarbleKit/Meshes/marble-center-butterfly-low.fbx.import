@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://di8nknoqo5345"
-path="res://.godot/imported/marble-center-butterfly-low.fbx-2a8bfe23344ea91f6798ac1c3713ded8.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/marble-center-butterfly-low.fbx"
-dest_files=["res://.godot/imported/marble-center-butterfly-low.fbx-2a8bfe23344ea91f6798ac1c3713ded8.scn"]
 
 [params]
 

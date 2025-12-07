@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://csstm13pegun4"
-path="res://.godot/imported/straight-wide-hole.fbx-592ca9a457cf6dcbad107512edd0713e.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/straight-wide-hole.fbx"
-dest_files=["res://.godot/imported/straight-wide-hole.fbx-592ca9a457cf6dcbad107512edd0713e.scn"]
 
 [params]
 

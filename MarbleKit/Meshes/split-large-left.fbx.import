@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bm6kjjeruq3p"
-path="res://.godot/imported/split-large-left.fbx-09aa5a41f3b73dae2591992adc45b994.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/split-large-left.fbx"
-dest_files=["res://.godot/imported/split-large-left.fbx-09aa5a41f3b73dae2591992adc45b994.scn"]
 
 [params]
 

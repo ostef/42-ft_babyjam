@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bcqggjndsw8bd"
-path="res://.godot/imported/support-single-top.fbx-c6e89111b8c0a5500a7915be40aa423a.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-single-top.fbx"
-dest_files=["res://.godot/imported/support-single-top.fbx-c6e89111b8c0a5500a7915be40aa423a.scn"]
 
 [params]
 

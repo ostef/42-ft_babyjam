@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1mxmral5fu8u"
-path="res://.godot/imported/split-double-solid.fbx-9418426d13d7f50c8e36542f352fcbdb.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/split-double-solid.fbx"
-dest_files=["res://.godot/imported/split-double-solid.fbx-9418426d13d7f50c8e36542f352fcbdb.scn"]
 
 [params]
 

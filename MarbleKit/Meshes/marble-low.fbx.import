@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://vhnj86v3hpc5"
-path="res://.godot/imported/marble-low.fbx-03292665f34b620528a273cf00d5fcb4.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/marble-low.fbx"
-dest_files=["res://.godot/imported/marble-low.fbx-03292665f34b620528a273cf00d5fcb4.scn"]
 
 [params]
 

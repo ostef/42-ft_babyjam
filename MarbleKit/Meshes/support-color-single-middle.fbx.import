@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ca55ykq6qdkkc"
-path="res://.godot/imported/support-color-single-middle.fbx-ca0b7101b60fa5a09a4b15daa7cd536f.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/support-color-single-middle.fbx"
-dest_files=["res://.godot/imported/support-color-single-middle.fbx-ca0b7101b60fa5a09a4b15daa7cd536f.scn"]
 
 [params]
 

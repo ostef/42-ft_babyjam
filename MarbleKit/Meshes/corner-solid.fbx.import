@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://csb2tvqay27pb"
-path="res://.godot/imported/corner-solid.fbx-d7ffafda072e3f42f3e6a7ebf0e416e6.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/corner-solid.fbx"
-dest_files=["res://.godot/imported/corner-solid.fbx-d7ffafda072e3f42f3e6a7ebf0e416e6.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dira4mef42wvc"
-path="res://.godot/imported/helix-large-left.fbx-e5547dcb7b9e48246a796aeeda722cea.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/helix-large-left.fbx"
-dest_files=["res://.godot/imported/helix-large-left.fbx-e5547dcb7b9e48246a796aeeda722cea.scn"]
 
 [params]
 

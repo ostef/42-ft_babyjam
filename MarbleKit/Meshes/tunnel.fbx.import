@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hu7kt3r8gorj"
-path="res://.godot/imported/tunnel.fbx-ab8fcaa7c85107575a7f56d2603e09ab.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/tunnel.fbx"
-dest_files=["res://.godot/imported/tunnel.fbx-ab8fcaa7c85107575a7f56d2603e09ab.scn"]
 
 [params]
 

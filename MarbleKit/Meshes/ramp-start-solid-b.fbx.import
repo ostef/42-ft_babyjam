@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvr0ilrxlhbyt"
-path="res://.godot/imported/ramp-start-solid-b.fbx-13e7d773a1884422cff03c420184671c.scn"
+valid=false
 
 [deps]
 
 source_file="res://MarbleKit/Meshes/ramp-start-solid-b.fbx"
-dest_files=["res://.godot/imported/ramp-start-solid-b.fbx-13e7d773a1884422cff03c420184671c.scn"]
 
 [params]
 
