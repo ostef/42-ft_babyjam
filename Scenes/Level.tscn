@@ -1,10 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=19 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
-[ext_resource type="Script" path="res://Scenes/KillZone.gd" id="5_ienac"]
+[ext_resource type="Script" uid="uid://c8qvkvi6s3p5k" path="res://Scenes/KillZone.gd" id="5_ienac"]
 [ext_resource type="PackedScene" uid="uid://c682e8w5wnvma" path="res://Scenes/bato.tscn" id="5_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
 [ext_resource type="ArrayMesh" uid="uid://cfaf8p5trxcgj" path="res://Assets/Handmade/KillZone.obj" id="6_bktio"]
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="6_ienac"]
 [ext_resource type="PackedScene" uid="uid://m57t37r5oyf8" path="res://Scenes/Panier.tscn" id="6_or7tv"]
@@ -150,9 +149,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9653959, 0.49999568, -3.45
 
 [node name="Bumper3" parent="." instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 6.709081, 0.2780329, -3.8872144)
-
-[node name="Ball" parent="." instance=ExtResource("5_xylue")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0.056602895, 6.5833883, -2.315676)
 
 [node name="Plank5" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3.7, -14.5)
