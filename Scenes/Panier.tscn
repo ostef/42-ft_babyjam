@@ -10,7 +10,7 @@ data = PackedVector3Array(0.099199995, 3.0338, -0.80039996, 0.0958, 2.9966998, -
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_4c5b2"]
 height = 0.1015625
 
-[node name="Panier" type="Area3D"]
+[node name="Panier" type="StaticBody3D"]
 script = ExtResource("1_4c5b2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

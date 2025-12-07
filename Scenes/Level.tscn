@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=17 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
@@ -10,6 +10,7 @@
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
 [ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
+[ext_resource type="PackedScene" uid="uid://5j8sfpbowqbv" path="res://Scenes/jumper.tscn" id="11_esopp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -134,7 +135,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2072463, 0.5, -3.7019172)
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 6.709081, 0.2780329, -3.8872144)
 
 [node name="Ball" parent="." instance=ExtResource("5_xylue")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0.056602895, 6.5833783, -1.744618)
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0.056602895, 6.5833883, -2.315676)
 
 [node name="Plank5" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3.7, -14.5)
@@ -147,5 +148,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.4
 
 [node name="Plank8" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.4494405, 3.7, -8)
+
+[node name="Jumper" parent="." instance=ExtResource("11_esopp")]
+transform = Transform3D(2, 0, 0, 0, 2, -3.4868717e-05, 0, 3.4868717e-05, 2, -0.116405666, 0.07202109, 5.208985)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
