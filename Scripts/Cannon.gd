@@ -5,7 +5,7 @@ extends Node3D
 @onready var explosion = $Stand/Canon/ExplosionLight
 @onready var muzzle = $MuzzleFlash_1
 @onready var animation_player = $AnimationPlayer
-@export var cooldown_time: float = 3.0
+@export var cooldown_time: float = 1.5
 var current_time: float = 0.0
 var is_on_cooldown: bool = false
 
