@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=11 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="1_0ba56"]
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
+[ext_resource type="ArrayMesh" uid="uid://cuyhrsf4m7wmt" path="res://Assets/bato.obj" id="5_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://dkut7gxrojfc3" path="res://Scenes/Ball.tscn" id="5_xylue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c1w88"]
@@ -79,3 +80,7 @@ transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.3
 
 [node name="Ramp" parent="." instance=ExtResource("4_fuudy")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 15.336541, 1.60392e-05, -0.9199765)
+
+[node name="Bato" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0, 8.244635, 0.00014373992)
+mesh = ExtResource("5_tj5wv")
