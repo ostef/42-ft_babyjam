@@ -1,4 +1,4 @@
-# Blender 4.5.1 LTS
+# Blender 4.5.2 LTS
 # www.blender.org
 mtllib RampEntry.mtl
 o RampEntry
@@ -369,6 +369,7 @@ vt 0.062500 0.500000
 vt 0.031250 0.500000
 vt 0.000000 0.500000
 s 1
+usemtl Metal
 f 74/1/70 1/2/1 2/3/2 75/4/71
 f 75/4/71 2/3/2 3/5/3 76/6/72
 f 76/6/72 3/5/3 4/7/4 77/8/73

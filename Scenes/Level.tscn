@@ -1,16 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=20 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
+[ext_resource type="PackedScene" uid="uid://d1db7s2pwvn4p" path="res://Scenes/Jumper.tscn" id="4_b10nm"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
-[ext_resource type="Script" path="res://Scenes/KillZone.gd" id="5_ienac"]
+[ext_resource type="Script" uid="uid://c8qvkvi6s3p5k" path="res://Scenes/KillZone.gd" id="5_ienac"]
 [ext_resource type="PackedScene" uid="uid://c682e8w5wnvma" path="res://Scenes/bato.tscn" id="5_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
+[ext_resource type="ArrayMesh" uid="uid://cfaf8p5trxcgj" path="res://Assets/Handmade/KillZone.obj" id="6_bktio"]
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="6_ienac"]
 [ext_resource type="PackedScene" uid="uid://m57t37r5oyf8" path="res://Scenes/Panier.tscn" id="6_or7tv"]
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
 [ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
 [ext_resource type="PackedScene" uid="uid://cy6r8ngsqkkkf" path="res://Scenes/jumper.tscn" id="11_esopp"]
+[ext_resource type="PackedScene" uid="uid://cvryhi7q76aqn" path="res://Scenes/RodBumper.tscn" id="9_esopp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,8 +30,15 @@ tonemap_mode = 2
 glow_enabled = true
 glow_bloom = 0.2
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fuudy"]
-size = Vector3(11.315666, 2.8504639, 3.3700867)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhlu0"]
+transparency = 1
+albedo_color = Color(0.27450982, 0.13333334, 0.12941177, 0.5921569)
+emission_enabled = true
+emission = Color(0.37876213, 0.009537908, 0.10132914, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_44tr1"]
+data = PackedVector3Array(4.3378997, 0, -3.2308, 0, 0, 0.29009998, -4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, 0, -3.054, 0.29009998, 4.3378997, -3.054, -3.2308, 0, -3.054, 0.29009998, 0, 0, 0.29009998, 4.3378997, -3.054, -3.2308, 4.3378997, -3.054, -3.2308, 0, 0, 0.29009998, 4.3378997, 0, -3.2308, 4.3378997, -3.054, -3.2308, 4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, -4.3378997, -3.054, -3.2308, 4.3378997, 0, -3.2308, -4.3378997, 0, -3.2308, -4.3378997, -3.054, -3.2308, -4.3378997, 0, -3.2308, 0, -3.054, 0.29009998, 0, -3.054, 0.29009998, -4.3378997, 0, -3.2308, 0, 0, 0.29009998)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ienac"]
 data = PackedVector3Array(0.35799998, 1.0804, -0.2668, 1.5950999, 1.0804, 0.24129999, 1.402, 1.0804, 0.60319996, 1.5950999, 1.0804, 0.24129999, 0.35799998, 1.0804, -0.2668, 1.3098999, 1.0804, 0.0037, 1.3098999, 1.0804, 0.0037, 0.35799998, 1.0804, -0.2668, 0.46339998, 1.0804, -0.7018, 0.46339998, 1.0804, -0.7018, 0.35799998, 1.0804, -0.2668, -0.338, 1.0804, -0.2668, -0.338, 1.0804, -0.2668, -0.44329998, 1.0804, -0.7018, 0.46339998, 1.0804, -0.7018, -0.338, 1.0804, -0.2668, -1.2854999, 1.0804, 0, -0.44329998, 1.0804, -0.7018, -0.338, 1.0804, -0.2668, -1.5749999, 1.0804, 0.24129999, -1.2854999, 1.0804, 0, -1.5749999, 1.0804, 0.24129999, -0.338, 1.0804, -0.2668, -1.382, 1.0804, 0.60319996, -0.338, -0.0158, -0.2668, -1.5749999, -0.0158, 0.24129999, -1.382, -0.0158, 0.60319996, -1.5749999, -0.0158, 0.24129999, -0.338, -0.0158, -0.2668, -1.2854999, -0.0158, 0, -1.2854999, -0.0158, 0, -0.338, -0.0158, -0.2668, -0.44329998, -0.0158, -0.7018, -0.44329998, -0.0158, -0.7018, -0.338, -0.0158, -0.2668, 0.35799998, -0.0158, -0.2668, 0.35799998, -0.0158, -0.2668, 0.46339998, -0.0158, -0.7018, -0.44329998, -0.0158, -0.7018, 0.35799998, -0.0158, -0.2668, 1.3054999, -0.0158, 0, 0.46339998, -0.0158, -0.7018, 0.35799998, -0.0158, -0.2668, 1.5950999, -0.0158, 0.24129999, 1.3054999, -0.0158, 0, 1.5950999, -0.0158, 0.24129999, 0.35799998, -0.0158, -0.2668, 1.402, -0.0158, 0.60319996, 1.402, -0.0158, 0.60319996, 1.5950999, 1.0804, 0.24129999, 1.5950999, -0.0158, 0.24129999, 1.5950999, 1.0804, 0.24129999, 1.402, -0.0158, 0.60319996, 1.402, 1.0804, 0.60319996, 0.46339998, 1.0804, -0.7018, -0.44329998, -0.0158, -0.7018, 0.46339998, -0.0158, -0.7018, -0.44329998, -0.0158, -0.7018, 0.46339998, 1.0804, -0.7018, -0.44329998, 1.0804, -0.7018, -1.5749999, 1.0804, 0.24129999, -1.382, -0.0158, 0.60319996, -1.5749999, -0.0158, 0.24129999, -1.382, -0.0158, 0.60319996, -1.5749999, 1.0804, 0.24129999, -1.382, 1.0804, 0.60319996, 1.3054999, 0.5323, 0, 0.46339998, -0.0158, -0.7018, 1.3054999, -0.0158, 0, 1.3054999, 0.5323, 0, 0.46339998, 1.0804, -0.7018, 0.46339998, -0.0158, -0.7018, 0.46339998, 1.0804, -0.7018, 1.3054999, 0.5323, 0, 1.3098999, 1.0804, 0.0037, -0.44329998, 1.0804, -0.7018, -1.2854999, -0.0158, 0, -0.44329998, -0.0158, -0.7018, -1.2854999, -0.0158, 0, -0.44329998, 1.0804, -0.7018, -1.2854999, 1.0804, 0, 1.402, -0.0158, 0.60319996, -1.382, 1.0804, 0.60319996, 1.402, 1.0804, 0.60319996, -1.382, 1.0804, 0.60319996, 1.402, -0.0158, 0.60319996, -1.382, -0.0158, 0.60319996, 1.402, -0.0158, 0.60319996, -0.338, -0.0158, -0.2668, -1.382, -0.0158, 0.60319996, -0.338, -0.0158, -0.2668, 1.402, -0.0158, 0.60319996, 0.35799998, -0.0158, -0.2668, -1.382, 1.0804, 0.60319996, 0.35799998, 1.0804, -0.2668, 1.402, 1.0804, 0.60319996, 0.35799998, 1.0804, -0.2668, -1.382, 1.0804, 0.60319996, -0.338, 1.0804, -0.2668, 1.5950999, 1.0804, 0.24129999, 1.3054999, -0.0158, 0, 1.5950999, -0.0158, 0.24129999, 1.3054999, -0.0158, 0, 1.5950999, 1.0804, 0.24129999, 1.3098999, 1.0804, 0.0037, 1.3054999, -0.0158, 0, 1.3098999, 1.0804, 0.0037, 1.3054999, 0.5323, 0, -1.2854999, 1.0804, 0, -1.5749999, -0.0158, 0.24129999, -1.2854999, -0.0158, 0, -1.5749999, -0.0158, 0.24129999, -1.2854999, 1.0804, 0, -1.5749999, 1.0804, 0.24129999)
@@ -50,18 +60,25 @@ action_name = "launch_right"
 launch_velocity = 12.0
 
 [node name="Ramp" parent="." instance=ExtResource("4_fuudy")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.586913, -1.3489438, -1.3311316)
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.586913, -1.1890393, -1.3311288)
 
 [node name="Bato" parent="." instance=ExtResource("5_tj5wv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, -0.002968073, 8.244635, -0.003096607)
 
+[node name="Jumper" parent="." instance=ExtResource("4_b10nm")]
+transform = Transform3D(-1.5, 0, 2.2649371e-07, 0, 1.5, 0, -2.2649371e-07, 0, -1.5, 0.18289036, 0.06920217, 6.7474623)
+
 [node name="KillZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00025557558, 14.659305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48494047, 16.658054)
 script = ExtResource("5_ienac")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="KillZone"]
+mesh = ExtResource("6_bktio")
+surface_material_override/0 = SubResource("StandardMaterial3D_fhlu0")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18288803, 0.92523193, 0.39393616)
-shape = SubResource("BoxShape3D_fuudy")
+transform = Transform3D(1, 0, 0, 0, 3.36, 0, 0, 0, 1, 0, 7.3223176, 1.4551915e-11)
+shape = SubResource("ConcavePolygonShape3D_44tr1")
 
 [node name="Blocker2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6248303, 0, 1.1294156, 0, 1, 0, -1.082238, 0, 0.6520683, 4.5645704, -0.3529069, 10.75684)
@@ -90,7 +107,7 @@ shape = SubResource("ConcavePolygonShape3D_ienac")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -5, 0.278, 1)
 
 [node name="Bumper2" parent="Bumpers" instance=ExtResource("6_ienac")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 5, 0.278, 1)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 2.184188, 0.27803046, -0.7453742)
 
 [node name="Bumper5" parent="Bumpers" instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -4, 3.5, -12)
@@ -119,11 +136,26 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 3
 [node name="Bumper3" parent="Bumpers" instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -0.016386986, 0.2780835, -3.7889678)
 
+[node name="RodBumper" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9646113, -6.2137974e-07, 2.3330772)
+
+[node name="RodBumper2" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.159656, 1.3009958e-06, 2.7971725)
+
+[node name="RodBumper3" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.894525, 6.501284e-07, 3.6823683)
+
+[node name="RodBumper4" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.232972, -1.0371803e-06, 4.7090635)
+
+[node name="RodBumper5" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4758778, 8.3941666e-07, 4.6561265)
+
 [node name="Plank" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.405, 0.5, 4)
 
 [node name="Plank2" parent="." instance=ExtResource("8_5rrr5")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.448, 0.5, 4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.448, 0.5, 5.5041027)
 
 [node name="Plank3" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5161865, 0.5, -3.7019172)
