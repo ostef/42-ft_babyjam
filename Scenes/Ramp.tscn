@@ -1,22 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk0icbby8c6dx"]
+[gd_scene load_steps=6 format=3 uid="uid://dk0icbby8c6dx"]
 
 [ext_resource type="PackedScene" uid="uid://drkip5q5oul4k" path="res://Scenes/RampPart.tscn" id="2_mpdml"]
 [ext_resource type="PackedScene" uid="uid://b4htoxjcbp8jv" path="res://Scenes/Spring.tscn" id="3_mpdml"]
-[ext_resource type="PackedScene" uid="uid://clgctw5ld4l2l" path="res://Scenes/RampEntry.tscn" id="3_qhpex"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhpex"]
 size = Vector3(10.214294, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_umsqe"]
-size = Vector3(7.3575287, 1, 1)
+size = Vector3(10.198818, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jobul"]
-size = Vector3(1.2105713, 2.399353, 2.965149)
+size = Vector3(1.3787384, 2.399353, 3.881134)
 
 [node name="Ramp" type="Node3D"]
 
 [node name="Spring" parent="." instance=ExtResource("3_mpdml")]
-transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710624e-08, 1.7434359e-05, 0.7675228, 3.8039465, -0.035080433)
+transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710624e-08, 1.7434359e-05, 0.5365033, 3.8039465, -0.035080433)
 
 [node name="Ramp5" parent="." instance=ExtResource("2_mpdml")]
 transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -8.032107, 3.8039465, -0.035080433)
@@ -27,8 +26,8 @@ transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712
 [node name="Ramp7" parent="." instance=ExtResource("2_mpdml")]
 transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -4.0321074, 3.8039465, -0.035080433)
 
-[node name="RampEntry" parent="." instance=ExtResource("3_qhpex")]
-transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710628e-08, 1.7434359e-05, -0.032108307, 3.8039465, -0.035080433)
+[node name="Ramp8" parent="." instance=ExtResource("2_mpdml")]
+transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -2.0321074, 3.8039465, -0.035080433)
 
 [node name="Walls" type="StaticBody3D" parent="."]
 
@@ -37,9 +36,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01663, 4.090458, 1.2293178
 shape = SubResource("BoxShape3D_qhpex")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.445013, 4.090458, -1.2997108)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0243683, 4.090458, -1.2997108)
 shape = SubResource("BoxShape3D_umsqe")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5525294, 4.050663, -0.5493469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46844584, 4.050663, -0.09135437)
 shape = SubResource("BoxShape3D_jobul")
