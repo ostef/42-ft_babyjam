@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://daxusf40xmfpa"]
+[gd_scene load_steps=6 format=3 uid="uid://daxusf40xmfpa"]
 
 [ext_resource type="PackedScene" uid="uid://y6xk74nflxgv" path="res://Scenes/GameUi.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://c0juyp2qu4f62" path="res://Scenes/Level.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://cymcl0xygwkut" path="res://Scripts/World.gd" id="1_rgh2o"]
-[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="3_rgh2o"]
-[ext_resource type="PackedScene" uid="uid://d1db7s2pwvn4p" path="res://Scenes/Jumper.tscn" id="5_pbw6q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rgh2o"]
+size = Vector3(17.491821, 1.8621216, 16.015656)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_rgh2o")
@@ -22,7 +23,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.52790487, 0.84930354, 0, -0.84930354, 0.52790487, -1.9073486e-06, 17.052105, 15.053354)
 
 [node name="Level" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768e-05, 0.9737555, 0, 0, 0)
+transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768e-05, 0.9737555, -0.001162529, -1.9073486e-06, 0.023470879)
 
 [node name="WorldBounds" type="Area3D" parent="."]
 
@@ -30,10 +31,14 @@ transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768
 transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 0, 0, 0)
 shape = SubResource("BoxShape3D_kln2b")
 
-[node name="Ball" parent="." instance=ExtResource("3_rgh2o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19717693, 1.0542436, 4.7519984)
+[node name="WindArea" type="Area3D" parent="."]
 
-[node name="Jumper" parent="." instance=ExtResource("5_pbw6q")]
-transform = Transform3D(-1.5, 0, 2.2649371e-07, 0, 1.5, 0, -2.2649371e-07, 0, -1.5, 0, 0.096, 7.048)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WindArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1663208, 0.4310608, 4.648529)
+shape = SubResource("BoxShape3D_rgh2o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="WindArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1663208, 3.8041978, -11.7936325)
+shape = SubResource("BoxShape3D_rgh2o")
 
 [connection signal="body_exited" from="WorldBounds" to="." method="_on_body_exited_world_bounds"]
