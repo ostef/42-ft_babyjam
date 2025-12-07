@@ -21,16 +21,15 @@ func apply_explosion_force(body: RigidBody3D):
 	var push_vector = direction.normalized() * explosion_force
 	body.apply_central_impulse(push_vector)
 
-func _on_body_entered(body: Node) -> void:
-	if body is RigidBody3D || body is Bumper:
-		explode()
-
 func spawn_animation():
 	var boom_instance = explosion_animation.instantiate()
 	get_parent().add_child(boom_instance)
 	boom_instance.explosion()
 	boom_instance.global_position = global_position
 
-
 func _on_timer_timeout() -> void:
 	explode()
+
+func _on_contact_body_entered(body: Node3D) -> void:
+	if body is Ball:
+		explode()

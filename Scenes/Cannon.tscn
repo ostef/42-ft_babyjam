@@ -5,7 +5,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bfndio66xmylh" path="res://Assets/Handmade/Canon.obj" id="3_4l5vp"]
 [ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="4_bcdaw"]
 [ext_resource type="ArrayMesh" uid="uid://csqp1v4g8a0xi" path="res://Assets/Handmade/CanonStand.obj" id="4_prjab"]
-[ext_resource type="Texture2D" uid="uid://dntqwhqp4l8uo" path="res://Assets/canon_bar.png" id="5_4bh85"]
 [ext_resource type="PackedScene" uid="uid://c76ggriths1rd" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/explosions/explosion_light.tscn" id="6_w04vy"]
 [ext_resource type="PackedScene" uid="uid://b811lwp060mex" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/muzzle_flash/muzzle_flash_1.tscn" id="7_bcdaw"]
 
@@ -70,7 +69,7 @@ _data = {
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_w04vy"]
-radius = 1.5532261
+radius = 2.2366915
 
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
 script = ExtResource("1_6tdpc")
@@ -84,7 +83,7 @@ mesh = ExtResource("4_prjab")
 surface_material_override/0 = ExtResource("4_bcdaw")
 
 [node name="Canon" type="MeshInstance3D" parent="Stand"]
-transform = Transform3D(1, 0, 0, 0, 0.99885905, -0.04775149, 0, 0.04775149, 0.99885905, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.998859, -0.047751486, 0, 0.047751486, 0.998859, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
 surface_material_override/1 = ExtResource("4_bcdaw")
@@ -94,26 +93,6 @@ transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.8214301,
 
 [node name="ExplosionLight" parent="Stand/Canon" instance=ExtResource("6_w04vy")]
 transform = Transform3D(1, 0, 0, 0, 0.04775148, -0.9988596, 0, 0.9988596, 0.04775148, 0, -0.48624998, 0.067880124)
-
-[node name="cooldown_bar" type="TextureProgressBar" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 422.99994
-offset_top = 159.99997
-offset_right = 993.0
-offset_bottom = 480.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.2, 0.2)
-value = 100.0
-fill_mode = 4
-texture_under = ExtResource("5_4bh85")
-texture_progress = ExtResource("5_4bh85")
-tint_under = Color(0.609943, 0, 0.19510154, 1)
-tint_progress = Color(0.3372549, 0.7254902, 0.3372549, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -127,3 +106,8 @@ transform = Transform3D(0.0143726, 0, 1.9999082, 0, 1.9999999, 0, -1.499931, -7.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="around"]
 shape = SubResource("SphereShape3D_w04vy")
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
