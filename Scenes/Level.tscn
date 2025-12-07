@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=10 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="1_0ba56"]
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
-[ext_resource type="PackedScene" uid="uid://b4htoxjcbp8jv" path="res://Scenes/Spring.tscn" id="3_fuudy"]
-[ext_resource type="ArrayMesh" uid="uid://ddp112g17q146" path="res://Assets/Handmade/Ramp.obj" id="5_tj5wv"]
+[ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
 [ext_resource type="PackedScene" uid="uid://dkut7gxrojfc3" path="res://Scenes/Ball.tscn" id="5_xylue"]
-[ext_resource type="ArrayMesh" uid="uid://c6hvuhmivea5c" path="res://Assets/Handmade/RampEntry.obj" id="6_ienac"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c1w88"]
 
@@ -65,18 +63,6 @@ transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, -4.6
 [node name="Bumper5" parent="." instance=ExtResource("1_0ba56")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 5.0619755, 0.25757462, -6.132802)
 
-[node name="Spring" parent="." instance=ExtResource("3_fuudy")]
-transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710624e-08, 1.7434359e-05, 15.172408, 4.050035, -0.95948786)
-
-[node name="Ramp" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 8.967893, 3.803968, -1.2606478)
-
-[node name="Ramp2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 10.967893, 3.803968, -1.2606478)
-
-[node name="Ramp3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 12.967893, 3.803968, -1.2606478)
-
 [node name="Ball" parent="." instance=ExtResource("5_xylue")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, -0.69175774, 0.44999692, 9.104487)
 
@@ -88,18 +74,8 @@ action_name = "launch_left"
 transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 6, -0.00015690923, 9)
 action_name = "launch_right"
 
-[node name="Ramp4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 10.540902, 4.050035, -0.95948786)
-mesh = ExtResource("5_tj5wv")
+[node name="Ball2" parent="." instance=ExtResource("5_xylue")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 14.362004, 3.7243595, -2.5152316)
 
-[node name="Ramp7" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710628e-08, 1.7434359e-05, 14.540902, 4.050035, -0.95948786)
-mesh = ExtResource("6_ienac")
-
-[node name="Ramp5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 8.540902, 4.050035, -0.95948786)
-mesh = ExtResource("5_tj5wv")
-
-[node name="Ramp6" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 6.540902, 4.050035, -0.95948786)
-mesh = ExtResource("5_tj5wv")
+[node name="Ramp" parent="." instance=ExtResource("4_fuudy")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 15.336541, 1.60392e-05, -0.9199765)

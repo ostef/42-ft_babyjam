@@ -1,9 +1,9 @@
 extends Node
 
-@onready
-var animation_player = $AnimationPlayer
-@export
-var spring_load_speed = 1
+@onready var animation_player = $AnimationPlayer
+# Min value before the ball is placed on the spring
+@export var spring_load_min = 0.8
+@export var spring_load_speed = 1
 var spring_load: float
 
 func _process(delta: float) -> void:
