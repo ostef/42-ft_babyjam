@@ -4,7 +4,6 @@ extends RigidBody3D
 @onready var explosion_radius = $ExplosionRadius
 @export var explosion_animation : PackedScene
 
-
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("explosion"):
 		explode()
@@ -31,3 +30,7 @@ func spawn_animation():
 	get_parent().add_child(boom_instance)
 	boom_instance.explosion()
 	boom_instance.global_position = global_position
+
+
+func _on_timer_timeout() -> void:
+	explode()

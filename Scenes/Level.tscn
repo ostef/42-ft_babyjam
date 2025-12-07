@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=13 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
-[ext_resource type="Script" uid="uid://c8qvkvi6s3p5k" path="res://Scenes/KillZone.gd" id="5_ienac"]
+[ext_resource type="Script" path="res://Scenes/KillZone.gd" id="5_ienac"]
 [ext_resource type="PackedScene" uid="uid://c682e8w5wnvma" path="res://Scenes/bato.tscn" id="5_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
+[ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="6_ienac"]
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
+[ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_bottom_color = Color(0.17726976, 0.23567736, 0.6156635, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
 [sub_resource type="Sky" id="Sky_tj5wv"]
@@ -33,16 +35,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 1.7434359e-05, 0, -1.7434359e-05, 1, 0, 0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ienac")
 
-[node name="Ball" parent="." instance=ExtResource("5_xylue")]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0.6160721, 0.45014703, 0.49435636)
-
 [node name="CannonLeft" parent="." instance=ExtResource("2_8rbpu")]
-transform = Transform3D(0.70710677, 0, -0.70710677, -1.2327953e-05, 1, -1.2327953e-05, 0.70710677, 1.7434359e-05, 0.70710677, -4.0921555, 0.7678368, 13.032757)
+transform = Transform3D(0.70710677, 0, -0.70710677, -1.2327953e-05, 1, -1.2327953e-05, 0.70710677, 1.7434359e-05, 0.70710677, -3, 0.5, 13)
 action_name = "launch_left"
 launch_velocity = 12.0
 
 [node name="CannonRight" parent="." instance=ExtResource("2_8rbpu")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 4.0379715, 0.7096162, 12.911532)
+transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 3, 0.5, 13)
 action_name = "launch_right"
 launch_velocity = 12.0
 
@@ -61,7 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18288803, 0.92523193, 0.393
 shape = SubResource("BoxShape3D_fuudy")
 
 [node name="Blocker2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.7928945, 1.8189894e-12, 1.0080101, 1.6839916e-05, 1, -1.4426211e-05, -0.9659039, 1.743436e-05, 0.8274588, 4.3255258, -0.3529069, 10.75684)
+transform = Transform3D(0.6248303, 0, 1.1294156, 0, 1, 0, -1.082238, 0, 0.6520683, 4.5645704, -0.3529069, 10.75684)
 mesh = ExtResource("6_tj5wv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Blocker2"]
@@ -70,12 +69,41 @@ mesh = ExtResource("6_tj5wv")
 shape = SubResource("ConcavePolygonShape3D_ienac")
 
 [node name="Blocker3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.80748564, 1.8189894e-12, -0.9953154, -1.6627837e-05, 1, -1.4691688e-05, 0.9537394, 1.743436e-05, 0.84268606, -4.4412074, -0.35290328, 10.547693)
+transform = Transform3D(0.6248303, 0, -1.1294156, 0, 1, 0, 1.082238, 0, 0.6520683, -4.709369, -0.35290328, 10.547693)
 mesh = ExtResource("6_tj5wv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Blocker3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Blocker3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ienac")
+
+[node name="Bumpers" type="Node3D" parent="."]
+
+[node name="Bumper" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -5, 0.278, 1)
+
+[node name="Bumper2" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 5, 0.278, 1)
+
+[node name="Bumper3" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 0, 0.278, -1.9999999)
+
+[node name="Bumper5" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -4.5064807, 3.6874368, -11.55684)
+
+[node name="Bumper6" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -0.23041964, 3.6874368, -11.55684)
+
+[node name="Bumper7" parent="Bumpers" instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 4.1504445, 3.6874368, -11.55684)
+
+[node name="Almond" parent="Bumpers" instance=ExtResource("7_ienac")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -5, 0.196, 7.7)
+
+[node name="Almond2" parent="Bumpers" instance=ExtResource("7_ienac")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 5, 0.196, 7.7)
+
+[node name="Almond3" parent="Bumpers" instance=ExtResource("7_ienac")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0, 0.189, 2)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
