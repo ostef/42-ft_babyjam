@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dntqwhqp4l8uo"
-path="res://.godot/imported/canon_bar.png-3907ed2e18980241651e7347ab3b47d5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/canon_bar.png"
-dest_files=["res://.godot/imported/canon_bar.png-3907ed2e18980241651e7347ab3b47d5.ctex"]
 
 [params]
 

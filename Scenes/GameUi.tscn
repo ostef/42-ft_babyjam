@@ -1,101 +1,264 @@
-[gd_scene load_steps=9 format=3 uid="uid://y6xk74nflxgv"]
+[gd_scene load_steps=12 format=3 uid="uid://y6xk74nflxgv"]
 
 [ext_resource type="Script" uid="uid://dja6fe7syixey" path="res://Scenes/best_score.gd" id="1_1sgwc"]
+[ext_resource type="Texture2D" uid="uid://cqesglyalooqk" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/panel_brown_corners_a.png" id="1_cu33k"]
 [ext_resource type="Script" uid="uid://dgjy5601o11tc" path="res://Scenes/ScoreText.gd" id="1_pjk1m"]
-[ext_resource type="Script" uid="uid://b6smqxwi5ndqm" path="res://Test/add_button.gd" id="2_ar76i"]
+[ext_resource type="Texture2D" uid="uid://c1hr76sxncqm" path="res://Assets/Keyboard & Mouse/Double/keyboard_arrow_up.png" id="2_c2m43"]
 [ext_resource type="Script" uid="uid://um833t5fkyrl" path="res://Scenes/mult_label.gd" id="2_cu33k"]
-[ext_resource type="Script" uid="uid://lbnf0nmv502i" path="res://Test/mult_button.gd" id="4_1sgwc"]
-[ext_resource type="Script" uid="uid://d02p7bgg8ex1q" path="res://Test/reset_score.gd" id="5_5xtqs"]
-[ext_resource type="Script" uid="uid://by36jdd1xpnem" path="res://Test/reset_mult.gd" id="6_saj14"]
+[ext_resource type="Texture2D" uid="uid://fc61thvximd2" path="res://Assets/Keyboard & Mouse/Double/keyboard_arrow_right.png" id="3_7fyrv"]
+[ext_resource type="Texture2D" uid="uid://c7x6avlgut37o" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/panel_brown_arrows.png" id="3_cu33k"]
+[ext_resource type="Texture2D" uid="uid://ded7i61wkdwnu" path="res://Assets/Keyboard & Mouse/Double/keyboard_arrow_left.png" id="4_mp2ix"]
+[ext_resource type="Texture2D" uid="uid://b5wtwflrtbs81" path="res://Assets/Keyboard & Mouse/Double/keyboard_arrow_down.png" id="5_icirw"]
+[ext_resource type="Texture2D" uid="uid://c81lo6rjuyxg0" path="res://Assets/Keyboard & Mouse/Double/keyboard_space.png" id="6_hvm0t"]
 [ext_resource type="Script" uid="uid://b0jvn7wbnp721" path="res://Scenes/gameover.gd" id="8_5xtqs"]
 
-[node name="GameUi" type="Control"]
+[node name="GameUi" type="CanvasLayer"]
+
+[node name="Tuto" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Tuto"]
+layout_mode = 0
+offset_left = -292.0
+offset_top = 22.0
+offset_right = 16.0
+offset_bottom = 352.0
+texture = ExtResource("1_cu33k")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="dispenser5" type="Label" parent="Tuto/NinePatchRect"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 240.0
+offset_right = 270.0
+offset_bottom = 289.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "Jumper"
+horizontal_alignment = 2
+
+[node name="dispenser" type="Label" parent="Tuto/NinePatchRect"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 38.0
+offset_right = 340.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "Dispenser"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Tuto/NinePatchRect"]
+modulate = Color(0.38039216, 0.2627451, 0.14117648, 1)
+layout_mode = 0
+offset_left = 36.0
+offset_top = 233.0
+offset_right = 164.0
+offset_bottom = 361.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_c2m43")
+
+[node name="TextureRect2" type="TextureRect" parent="Tuto/NinePatchRect"]
+modulate = Color(0.38039216, 0.2627451, 0.14117648, 1)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 96.0
+offset_right = 228.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_7fyrv")
+
+[node name="TextureRect3" type="TextureRect" parent="Tuto/NinePatchRect"]
+modulate = Color(0.38039216, 0.2627451, 0.14117648, 1)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 96.0
+offset_right = 161.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_mp2ix")
+
+[node name="TextureRect4" type="TextureRect" parent="Tuto/NinePatchRect"]
+modulate = Color(0.38039216, 0.2627451, 0.14117648, 1)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 162.0
+offset_bottom = 159.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_icirw")
+
+[node name="TextureRect5" type="TextureRect" parent="Tuto/NinePatchRect"]
+modulate = Color(0.38039216, 0.2627451, 0.14117648, 1)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 133.0
+offset_right = 152.0
+offset_bottom = 261.0
+texture = ExtResource("6_hvm0t")
+
+[node name="dispenser3" type="Label" parent="Tuto/NinePatchRect"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 104.0
+offset_right = 361.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "Canon"
+horizontal_alignment = 1
+
+[node name="dispenser4" type="Label" parent="Tuto/NinePatchRect"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 174.0
+offset_right = 319.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "Barrel"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="score" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="best_score" type="Label" parent="score"]
+[node name="NinePatchRect" type="NinePatchRect" parent="score"]
 layout_mode = 0
-offset_right = 318.0
-offset_bottom = 77.0
-text = "Best Score : 0"
-script = ExtResource("1_1sgwc")
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 341.0
+offset_bottom = 208.0
+texture = ExtResource("1_cu33k")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
 
-[node name="score_label" type="Label" parent="score"]
+[node name="score_title" type="Label" parent="score/NinePatchRect"]
 layout_mode = 0
-offset_top = 24.0
-offset_right = 318.0
-offset_bottom = 101.0
-text = "Score : 0"
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 295.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "SCORE"
+horizontal_alignment = 1
+
+[node name="score_label" type="Label" parent="score/NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 42.0
+offset_right = 312.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "1000000"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("1_pjk1m")
 
-[node name="mult_label" type="Label" parent="score"]
+[node name="NinePatchRect" type="NinePatchRect" parent="score/NinePatchRect"]
+z_index = -1
 layout_mode = 0
-offset_top = 52.0
-offset_right = 318.0
-offset_bottom = 129.0
-text = "Mult 1x"
+offset_left = 34.0
+offset_top = 151.0
+offset_right = 278.0
+offset_bottom = 279.0
+texture = ExtResource("3_cu33k")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="mult_label" type="Label" parent="score/NinePatchRect/NinePatchRect"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 31.0
+offset_right = 215.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.6039216, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "x 1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("2_cu33k")
 
-[node name="Test" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="add" type="Button" parent="Test"]
+[node name="NinePatchRect2" type="NinePatchRect" parent="score"]
 layout_mode = 0
-offset_top = 80.0
-offset_right = 66.0
-offset_bottom = 111.0
-text = "Add"
-script = ExtResource("2_ar76i")
+offset_left = 29.0
+offset_top = 329.0
+offset_right = 343.0
+offset_bottom = 599.0
+texture = ExtResource("1_cu33k")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
 
-[node name="mult" type="Button" parent="Test"]
+[node name="score_title" type="Label" parent="score/NinePatchRect2"]
 layout_mode = 0
-offset_top = 115.0
-offset_right = 66.0
-offset_bottom = 146.0
-text = "Mult"
-script = ExtResource("4_1sgwc")
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 295.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "HIGH SCORE"
+horizontal_alignment = 1
 
-[node name="reset score" type="Button" parent="Test"]
+[node name="best_score" type="Label" parent="score/NinePatchRect2"]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 80.0
-offset_right = 181.0
-offset_bottom = 111.0
-text = "reset score"
-script = ExtResource("5_5xtqs")
+offset_left = 19.0
+offset_top = 36.0
+offset_right = 295.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "1000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_1sgwc")
 
-[node name="reset_mult" type="Button" parent="Test"]
+[node name="credit" type="Label" parent="score/NinePatchRect2"]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 115.0
-offset_right = 180.0
-offset_bottom = 146.0
-text = "reset mult"
-script = ExtResource("6_saj14")
+offset_left = 20.0
+offset_top = 146.0
+offset_right = 295.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "game by
+Owlly - Stef"
+horizontal_alignment = 1
 
 [node name="GameOver" type="Label" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -11.5
-offset_right = 43.5
-offset_bottom = 11.5
+offset_left = -258.0
+offset_top = -506.0
+offset_right = 285.0
+offset_bottom = -369.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
@@ -104,7 +267,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_5xtqs")
 
-[connection signal="pressed" from="Test/add" to="Test/add" method="_on_pressed"]
-[connection signal="pressed" from="Test/mult" to="Test/mult" method="_on_pressed"]
-[connection signal="pressed" from="Test/reset score" to="Test/reset score" method="_on_pressed"]
-[connection signal="pressed" from="Test/reset_mult" to="Test/reset_mult" method="_on_pressed"]
+[node name="press_enter" type="Label" parent="GameOver"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 128.0
+offset_right = 359.0
+offset_bottom = 151.0
+text = "Press ENTER to replay"
