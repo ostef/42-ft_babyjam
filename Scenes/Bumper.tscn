@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c61t2uvg51w3e"]
+[gd_scene load_steps=5 format=3 uid="uid://c61t2uvg51w3e"]
 
 [ext_resource type="Script" uid="uid://cr1h6t5nkx1an" path="res://Scripts/Bumper.gd" id="1_eyuvg"]
 [ext_resource type="ArrayMesh" uid="uid://b7gk1y7cr04wd" path="res://Assets/bumper.obj" id="2_dbaq6"]
+[ext_resource type="Material" uid="uid://cdwulikxmnux8" path="res://Assets/glow.tres" id="3_dbaq6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jw32o"]
 
@@ -16,5 +17,6 @@ shape = SubResource("SphereShape3D_jw32o")
 transform = Transform3D(1.185, 0, 0, 0, 1.185, 0, 0, 0, 1.185, 0, 0, 0)
 mesh = ExtResource("2_dbaq6")
 skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = ExtResource("3_dbaq6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

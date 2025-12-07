@@ -22,7 +22,7 @@ mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
 
 [node name="LaunchPoint" type="Node3D" parent="Stand/Canon"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3321507, 0)
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.8214301, 0.024415493)
 
 [node name="cooldown_bar" type="TextureProgressBar" parent="."]
 anchors_preset = 8

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=14 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="6_ienac"]
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
+[ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,12 +37,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 1.7434359e-05, 0, -1.7434359e-05, 1, 0, 0
 environment = SubResource("Environment_ienac")
 
 [node name="CannonLeft" parent="." instance=ExtResource("2_8rbpu")]
-transform = Transform3D(0.70710677, 0, -0.70710677, -1.2327953e-05, 1, -1.2327953e-05, 0.70710677, 1.7434359e-05, 0.70710677, -3, 0.5, 13)
+transform = Transform3D(0.70710677, 0, -0.70710677, -1.2327953e-05, 1, -1.2327953e-05, 0.70710677, 1.7434359e-05, 0.70710677, -3.5, 0.5, 13)
 action_name = "launch_left"
 launch_velocity = 12.0
 
 [node name="CannonRight" parent="." instance=ExtResource("2_8rbpu")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 3, 0.5, 13)
+transform = Transform3D(0.70710677, 0, 0.70710677, 1.2327953e-05, 1, -1.2327953e-05, -0.70710677, 1.7434359e-05, 0.70710677, 3.5, 0.5, 13)
 action_name = "launch_right"
 launch_velocity = 12.0
 
@@ -85,9 +86,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5
 [node name="Bumper2" parent="Bumpers" instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 5, 0.278, 1)
 
-[node name="Bumper3" parent="Bumpers" instance=ExtResource("6_ienac")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 0, 0.278, -1.9999999)
-
 [node name="Bumper5" parent="Bumpers" instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, -4.5064807, 3.6874368, -11.55684)
 
@@ -105,5 +103,20 @@ transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.
 
 [node name="Almond3" parent="Bumpers" instance=ExtResource("7_ienac")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, 0, 0.189, 2)
+
+[node name="Plank" parent="." instance=ExtResource("8_5rrr5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.405, 0.5, 4)
+
+[node name="Plank2" parent="." instance=ExtResource("8_5rrr5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.448, 0.5, 4)
+
+[node name="Plank3" parent="." instance=ExtResource("8_5rrr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5161865, 0.5, -3.7019172)
+
+[node name="Plank4" parent="." instance=ExtResource("8_5rrr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2072463, 0.5, -3.7019172)
+
+[node name="Bumper3" parent="." instance=ExtResource("6_ienac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 6.709081, 0.2780329, -3.8872144)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]

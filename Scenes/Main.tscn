@@ -13,8 +13,8 @@ script = ExtResource("1_rgh2o")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.5
 shadow_enabled = true
-shadow_blur = 1.103
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.52790487, 0.84930354, 0, -0.84930354, 0.52790487, -1.9073486e-06, 17.052105, 15.053354)
