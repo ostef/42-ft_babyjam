@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkut7gxrojfc3"]
+[gd_scene load_steps=4 format=3 uid="uid://b0eyvo42srkh0"]
+
+[ext_resource type="Script" uid="uid://cxe67fhkts0g6" path="res://Scenes/ball.gd" id="1_7nh6h"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]
 
@@ -6,6 +8,7 @@
 
 [node name="Ball" type="RigidBody3D"]
 continuous_cd = true
+script = ExtResource("1_7nh6h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

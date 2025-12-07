@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=10 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="1_0ba56"]
 [ext_resource type="PackedScene" uid="uid://blq66k652l7qo" path="res://Scenes/Canon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://b4htoxjcbp8jv" path="res://Scenes/Spring.tscn" id="3_fuudy"]
 [ext_resource type="ArrayMesh" uid="uid://ddp112g17q146" path="res://Assets/Handmade/Ramp.obj" id="4_fuudy"]
+[ext_resource type="PackedScene" uid="uid://b0eyvo42srkh0" path="res://Scenes/Ball.tscn" id="5_xylue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c1w88"]
 
@@ -86,6 +87,9 @@ mesh = ExtResource("4_fuudy")
 [node name="Ramp3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, 12.967893, 3.803968, -1.2606478)
 mesh = ExtResource("4_fuudy")
+
+[node name="Ball" parent="." instance=ExtResource("5_xylue")]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7434359e-05, 0, 1.7434359e-05, 1, -0.69175774, 0.44999692, 9.104487)
 
 [editable path="CanonLeft"]
 [editable path="CanonRight"]

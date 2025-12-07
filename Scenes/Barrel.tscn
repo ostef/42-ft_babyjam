@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://sk0a6qje1wmd"]
+[gd_scene load_steps=5 format=3 uid="uid://catrevey4mmeo"]
 
 [ext_resource type="Script" uid="uid://belsv2ndmtpq7" path="res://Scripts/LaunchedBall.gd" id="1_rfot1"]
 [ext_resource type="ArrayMesh" uid="uid://ekp1hil8qad7" path="res://Assets/Handmade/Barrel.obj" id="2_ayvs4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]
 radius = 0.33238783
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ayvs4"]
 
 [node name="Barrel" type="RigidBody3D"]
 continuous_cd = true
@@ -17,3 +19,9 @@ shape = SubResource("SphereShape3D_c1w88")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 mesh = ExtResource("2_ayvs4")
+
+[node name="ExplosionRadius" type="Area3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionRadius"]
+shape = SubResource("SphereShape3D_ayvs4")
