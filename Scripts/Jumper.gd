@@ -7,7 +7,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jumper"):
 		animation_player.play("JumperLaunch")
 		for body in around.get_overlapping_bodies():
-			if body is Ball:
+			if body is RigidBody3D:
 				var direction = global_transform.basis.z
 				direction.y = 0
 				direction = direction.normalized()

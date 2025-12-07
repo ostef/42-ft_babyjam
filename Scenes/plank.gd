@@ -9,4 +9,5 @@ func _on_body_entered(body: Node3D) -> void:
 		direction.y = 0
 		direction = direction.normalized()
 		body.linear_velocity = direction * power
-		Scoring.add_score(score)
+		if body is Ball:
+			Scoring.add_score(score)
