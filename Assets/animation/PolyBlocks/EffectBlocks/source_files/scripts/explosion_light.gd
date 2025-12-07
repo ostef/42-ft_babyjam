@@ -19,9 +19,6 @@ func _process(delta: float) -> void:
 			animation_time = 0.0
 			explosion()
 
-	elif Input.is_action_just_pressed("ui_accept"):
-		explosion()
-
 func explosion() -> void:
 	fire.restart()
 	sparks.restart()
