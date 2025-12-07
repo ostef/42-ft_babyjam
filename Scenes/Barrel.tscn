@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://catrevey4mmeo"]
 
-[ext_resource type="Script" uid="uid://belsv2ndmtpq7" path="res://Scripts/LaunchedBall.gd" id="1_rfot1"]
+[ext_resource type="Script" uid="uid://belsv2ndmtpq7" path="res://Scripts/Barrel.gd" id="1_rfot1"]
 [ext_resource type="ArrayMesh" uid="uid://ekp1hil8qad7" path="res://Assets/Handmade/Barrel.obj" id="2_ayvs4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1w88"]

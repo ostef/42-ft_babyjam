@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyg2xat68hlsg"]
+
+[ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Cannon.gd" id="1_6tdpc"]
+[ext_resource type="PackedScene" uid="uid://catrevey4mmeo" path="res://Scenes/Barrel.tscn" id="2_v4bqi"]
+[ext_resource type="ArrayMesh" uid="uid://bfndio66xmylh" path="res://Assets/Handmade/Canon.obj" id="3_4l5vp"]
+[ext_resource type="ArrayMesh" uid="uid://csqp1v4g8a0xi" path="res://Assets/Handmade/CanonStand.obj" id="4_prjab"]
+[ext_resource type="Texture2D" uid="uid://dntqwhqp4l8uo" path="res://Assets/canon_bar.png" id="5_4bh85"]
+
+[node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
+script = ExtResource("1_6tdpc")
+ball_scene = ExtResource("2_v4bqi")
+launch_point = NodePath("Stand/Canon/LaunchPoint")
+launch_velocity = 15.0
+
+[node name="Stand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.307658, 0)
+mesh = ExtResource("4_prjab")
+
+[node name="Canon" type="MeshInstance3D" parent="Stand"]
+transform = Transform3D(1, 0, 0, 0, 0.9988592, -0.047751497, 0, 0.047751497, 0.9988592, 0, 0, 0)
+mesh = ExtResource("3_4l5vp")
+skeleton = NodePath("../..")
+
+[node name="LaunchPoint" type="Node3D" parent="Stand/Canon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3321507, 0)
+
+[node name="cooldown_bar" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.0
+offset_top = -160.0
+offset_right = 285.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+value = 100.0
+fill_mode = 4
+texture_under = ExtResource("5_4bh85")
+texture_progress = ExtResource("5_4bh85")
+tint_under = Color(0.609943, 0, 0.19510154, 1)
+tint_progress = Color(0.3372549, 0.7254902, 0.3372549, 1)

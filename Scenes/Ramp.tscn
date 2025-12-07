@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk0icbby8c6dx"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddp112g17q146" path="res://Assets/Handmade/Ramp.obj" id="1_iynd3"]
+[ext_resource type="ArrayMesh" uid="uid://c6hvuhmivea5c" path="res://Assets/Handmade/RampEntry.obj" id="2_mpdml"]
+[ext_resource type="PackedScene" uid="uid://b4htoxjcbp8jv" path="res://Scenes/Spring.tscn" id="3_mpdml"]
+
+[node name="Ramp" type="Node3D"]
+
+[node name="Ramp" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -8.032107, 3.8039465, -0.035080433)
+mesh = ExtResource("1_iynd3")
+skeleton = NodePath("../..")
+
+[node name="Ramp2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -6.0321074, 3.8039465, -0.035080433)
+mesh = ExtResource("1_iynd3")
+skeleton = NodePath("../..")
+
+[node name="Ramp3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 4.3712134e-08, -1.7434359e-05, -4.3712898e-08, 1, 1, 4.3710624e-08, 1.7434359e-05, -4.0321074, 3.8039465, -0.035080433)
+mesh = ExtResource("1_iynd3")
+skeleton = NodePath("../..")
+
+[node name="Ramp4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710628e-08, 1.7434359e-05, -0.032108307, 3.8039465, -0.035080433)
+mesh = ExtResource("2_mpdml")
+skeleton = NodePath("../..")
+
+[node name="Spring" parent="." instance=ExtResource("3_mpdml")]
+transform = Transform3D(-4.371139e-08, -1, -4.3712134e-08, 1.7434359e-05, -4.3712898e-08, 1, -1, 4.3710624e-08, 1.7434359e-05, 0.7675228, 3.8039465, -0.035080433)

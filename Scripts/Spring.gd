@@ -1,0 +1,22 @@
+extends Node
+
+@onready
+var animation_player = $AnimationPlayer
+@export
+var spring_load_speed = 1
+var spring_load: float
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("spring"):
+		animation_player.play("SpringLoad", -1, 0)
+
+	if Input.is_action_pressed("spring"):
+		spring_load += spring_load_speed * delta
+		spring_load = clamp(spring_load, 0, 1)
+		animation_player.seek(spring_load)
+
+	if Input.is_action_just_released("spring"):
+		print("Launch! ", spring_load)
+
+		animation_player.play("SpringRelease")
+		spring_load = 0
