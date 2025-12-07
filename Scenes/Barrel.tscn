@@ -10,6 +10,8 @@ radius = 0.33238783
 
 [node name="Barrel" type="RigidBody3D"]
 continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 4
 script = ExtResource("1_rfot1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -25,3 +27,5 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionRadius"]
 shape = SubResource("SphereShape3D_ayvs4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

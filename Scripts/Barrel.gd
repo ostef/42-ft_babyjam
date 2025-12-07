@@ -18,3 +18,7 @@ func apply_explosion_force(body: RigidBody3D):
 	var direction = body.global_position - global_position
 	var push_vector = direction.normalized() * explosion_force
 	body.apply_central_impulse(push_vector)
+
+func _on_body_entered(body: Node) -> void:
+	if body is RigidBody3D || body is Bumper:
+		explode()
