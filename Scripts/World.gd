@@ -1,6 +1,6 @@
 extends Node
 
-@export var wind_force = 5.0
+@export var wind_force = 5
 @onready var world_bounds = $WorldBounds
 @onready var wind_area = $WindArea
 

@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		animation_player.seek(spring_load)
 		
 		if !current_ball && spring_load >= spring_load_min && GameManager.ball_in_stock > 0:
-			GameManager.ball_in_stock -= 1;
+			GameManager.remove_ball()
 			current_ball = ball_scene.instantiate()
 			ball_spawn_point.add_child(current_ball)
 

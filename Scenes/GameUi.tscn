@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://y6xk74nflxgv"]
+[gd_scene load_steps=13 format=3 uid="uid://y6xk74nflxgv"]
 
 [ext_resource type="Script" uid="uid://dja6fe7syixey" path="res://Scenes/best_score.gd" id="1_1sgwc"]
 [ext_resource type="Texture2D" uid="uid://cqesglyalooqk" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/panel_brown_corners_a.png" id="1_cu33k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b5wtwflrtbs81" path="res://Assets/Keyboard & Mouse/Double/keyboard_arrow_down.png" id="5_icirw"]
 [ext_resource type="Texture2D" uid="uid://c81lo6rjuyxg0" path="res://Assets/Keyboard & Mouse/Double/keyboard_space.png" id="6_hvm0t"]
 [ext_resource type="Script" uid="uid://b0jvn7wbnp721" path="res://Scenes/gameover.gd" id="8_5xtqs"]
+[ext_resource type="Script" uid="uid://dpeqowt4k4c2j" path="res://Scenes/ball_left.gd" id="12_7fyrv"]
 
 [node name="GameUi" type="CanvasLayer"]
 
@@ -274,3 +275,49 @@ offset_top = 128.0
 offset_right = 359.0
 offset_bottom = 151.0
 text = "Press ENTER to replay"
+
+[node name="balls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -332.0
+offset_top = 375.0
+offset_right = -292.0
+offset_bottom = 415.0
+grow_horizontal = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="balls"]
+layout_mode = 0
+offset_right = 308.0
+offset_bottom = 171.0
+texture = ExtResource("1_cu33k")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="dispenser5" type="Label" parent="balls/NinePatchRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 285.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.68235296, 0.4627451, 0.24313726, 1)
+theme_override_font_sizes/font_size = 32
+text = "Ball left"
+horizontal_alignment = 1
+
+[node name="ball_left" type="Label" parent="balls/NinePatchRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 41.0
+offset_right = 295.0
+offset_bottom = 157.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "3 / 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_7fyrv")
