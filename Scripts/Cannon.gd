@@ -5,6 +5,7 @@ extends Node3D
 @onready var explosion = $Stand/Canon/ExplosionLight
 @onready var muzzle = $MuzzleFlash_1
 @onready var animation_player = $AnimationPlayer
+@onready var around = $around
 @export var cooldown_time: float = 1.5
 var current_time: float = 0.0
 var is_on_cooldown: bool = false
@@ -26,11 +27,14 @@ func cooldown_positionning():
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed(action_name) and not is_on_cooldown:
 		trigger_cooldown()
-		var inst = ball_scene.instantiate()
-		get_parent_node_3d().add_child(inst)
-		inst.global_position = launch_point.global_position
-		inst.global_rotation = launch_point.global_rotation
-		inst.set_linear_velocity(-transform.basis.z * launch_velocity)
+		if not is_ball_around():
+			var inst = ball_scene.instantiate()
+			get_parent_node_3d().add_child(inst)
+			inst.global_position = launch_point.global_position
+			inst.global_rotation = launch_point.global_rotation
+			inst.set_linear_velocity(-transform.basis.z * launch_velocity)
+		else :
+			apply_force_around()
 		
 		muzzle.muzzle_flash()
 		explosion.explosion()
@@ -59,3 +63,18 @@ func update_cooldown(delta):
 
 func reset_state():
 	progress_bar.value = 100.0
+
+func is_ball_around():
+	for body in around.get_overlapping_bodies():
+		if body is Ball:
+			return true
+	return false
+
+func apply_force_around():
+	for body in around.get_overlapping_bodies():
+		if body is Ball:
+			var direction = -global_transform.basis.z
+			direction.y = 0
+			direction = direction.normalized()
+			body.linear_velocity = direction * 20
+	

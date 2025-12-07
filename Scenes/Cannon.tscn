@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dyg2xat68hlsg"]
+[gd_scene load_steps=12 format=3 uid="uid://dyg2xat68hlsg"]
 
 [ext_resource type="Script" uid="uid://da3mw83ysvrs4" path="res://Scripts/Cannon.gd" id="1_6tdpc"]
 [ext_resource type="PackedScene" uid="uid://catrevey4mmeo" path="res://Scenes/Barrel.tscn" id="2_v4bqi"]
@@ -68,6 +68,9 @@ _data = {
 &"RESET": SubResource("Animation_bcdaw")
 }
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_w04vy"]
+radius = 1.5532261
+
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("launch_point")]
 script = ExtResource("1_6tdpc")
 ball_scene = ExtResource("2_v4bqi")
@@ -79,7 +82,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 mesh = ExtResource("4_prjab")
 
 [node name="Canon" type="MeshInstance3D" parent="Stand"]
-transform = Transform3D(1, 0, 0, 0, 0.9988591, -0.04775149, 0, 0.04775149, 0.9988591, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99885905, -0.04775149, 0, 0.04775149, 0.99885905, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
 
@@ -116,3 +119,8 @@ libraries = {
 
 [node name="MuzzleFlash_1" parent="." instance=ExtResource("7_bcdaw")]
 transform = Transform3D(0.0143726, 0, 1.9999082, 0, 1.9999999, 0, -1.499931, -7.450581e-09, 0.019163467, 0, 0.35494328, -1.5428975)
+
+[node name="around" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="around"]
+shape = SubResource("SphereShape3D_w04vy")
