@@ -10,6 +10,7 @@ data = PackedVector3Array(0.2662, -0.064399995, 0.29119998, 0.30359998, -0.02, 0
 [node name="Almond" type="Area3D"]
 script = ExtResource("1_cklv2")
 power = 15
+score = 5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.185, 0, 0, 0, 1.185, 0, 0, 0, 1.185, 0, 0, 0)
