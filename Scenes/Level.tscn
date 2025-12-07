@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
-[ext_resource type="Script" path="res://Scenes/KillZone.gd" id="5_ienac"]
+[ext_resource type="Script" uid="uid://c8qvkvi6s3p5k" path="res://Scenes/KillZone.gd" id="5_ienac"]
 [ext_resource type="PackedScene" uid="uid://c682e8w5wnvma" path="res://Scenes/bato.tscn" id="5_tj5wv"]
 [ext_resource type="ArrayMesh" uid="uid://cfaf8p5trxcgj" path="res://Assets/Handmade/KillZone.obj" id="6_bktio"]
 [ext_resource type="PackedScene" uid="uid://c61t2uvg51w3e" path="res://Scenes/Bumper.tscn" id="6_ienac"]
@@ -186,7 +186,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8657694, 4.720037e-05, 0.16
 [node name="RodBumper5" parent="." instance=ExtResource("9_esopp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6800885, 3.756261e-05, 1.5651422)
 
-[node name="Plank10" parent="." instance=ExtResource("8_5rrr5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.405, 0.49998558, 4.8274784)
+[node name="RodBumper7" parent="." instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1680403, -6.4275795e-05, 5.984167)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
