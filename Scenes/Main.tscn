@@ -19,7 +19,7 @@ shadow_enabled = true
 shadow_blur = 1.103
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.43435103, 0.90074384, 0, -0.90074384, 0.43435103, -1.9073486e-06, 17.052105, 12.6784725)
+transform = Transform3D(1, 0, 0, 0, 0.52790487, 0.84930354, 0, -0.84930354, 0.52790487, -1.9073486e-06, 17.052105, 15.053354)
 
 [node name="Level" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(0.97375524, 0, 0, 0, 0.9737555, 1.69768e-05, 0, -1.69768e-05, 0.9737555, 0, 0, 0)

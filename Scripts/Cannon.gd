@@ -12,7 +12,7 @@ var is_on_cooldown: bool = false
 @export var launch_velocity = 10.0
 
 func _ready():
-	reset_state()
+	#reset_state()
 	cooldown_positionning()
 
 func cooldown_positionning():
@@ -51,4 +51,4 @@ func update_cooldown(delta):
 		progress_bar.value = ratio * 100
 
 func reset_state():
-	progress_bar.value = 100
+	progress_bar.value = 100.0

@@ -1,10 +1,16 @@
 # Created by Kenney (www.kenney.nl)
 
 newmtl metalLight(Clone)
-Kd 0.698 0.686 0.867
+Kd 0.665 0.641 1
 
-newmtl dark(Clone)
-Kd 0.245 0.271 0.359
+newmtl wood(Clone)
+Kd 0.84 0.435 0.305
+
+newmtl woodDark(Clone)
+Kd 0.698 0.316 0.194
+
+newmtl metalGreen(Clone)
+Kd 0.407 0.153 0.117
 
 newmtl lightRed(Clone)
 Kd 0.745 0.156 0.302
