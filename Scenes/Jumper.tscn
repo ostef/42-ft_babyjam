@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1db7s2pwvn4p"]
+[gd_scene load_steps=8 format=3 uid="uid://cy6r8ngsqkkkf"]
 
 [ext_resource type="Script" uid="uid://d0qoxt1beloty" path="res://Scripts/Jumper.gd" id="1_y02ja"]
+[ext_resource type="ArrayMesh" uid="uid://dwcj1w85qh261" path="res://Assets/jumper.obj" id="2_uo68r"]
 
 [sub_resource type="Animation" id="Animation_u5vx0"]
 resource_name = "JumperLaunch"
@@ -11,7 +12,7 @@ tracks/0/path = NodePath("AnimatableBody3D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 1),
+"times": PackedFloat32Array(0, 0.2, 0.53333336),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(1.5707964, 0, 0), Vector3(0, 0, 0)]
@@ -39,9 +40,10 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5vx0"]
-size = Vector3(1, 0.03842163, 1)
+size = Vector3(1.1990967, 0.03842163, 1.3742676)
 
-[sub_resource type="BoxMesh" id="BoxMesh_y02ja"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7iy36"]
+size = Vector3(1.2577238, 0.35845947, 1.3736572)
 
 [node name="Jumper" type="Node3D"]
 script = ExtResource("1_y02ja")
@@ -54,9 +56,15 @@ libraries = {
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.019360185, -0.51065135)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1035156e-05, -0.019360185, -0.4187324)
 shape = SubResource("BoxShape3D_u5vx0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.04, 0, 0, 0, 1, 0, 0.012598515, -0.51065135)
-mesh = SubResource("BoxMesh_y02ja")
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0.012598515, -0.3182894)
+mesh = ExtResource("2_uo68r")
+
+[node name="zone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010432035, 0.19369507, -0.39898682)
+shape = SubResource("BoxShape3D_7iy36")

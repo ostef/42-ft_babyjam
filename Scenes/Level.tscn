@@ -12,6 +12,7 @@
 [ext_resource type="ArrayMesh" uid="uid://0sbebautfyqn" path="res://Assets/Blocker1.obj" id="6_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://6wk17cjx1uda" path="res://Scenes/Almond.tscn" id="7_ienac"]
 [ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
+[ext_resource type="PackedScene" uid="uid://cy6r8ngsqkkkf" path="res://Scenes/jumper.tscn" id="11_esopp"]
 [ext_resource type="PackedScene" uid="uid://cvryhi7q76aqn" path="res://Scenes/RodBumper.tscn" id="9_esopp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
@@ -182,5 +183,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.4
 
 [node name="Plank8" parent="." instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.4494405, 3.7, -8)
+
+[node name="Jumper" parent="." instance=ExtResource("11_esopp")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -0.116405666, 0.07203116, 4.6311774)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
