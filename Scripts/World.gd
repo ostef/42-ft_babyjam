@@ -10,4 +10,6 @@ func _physics_process(delta: float) -> void:
 			body.apply_force(Vector3(0,0,wind_force))
 
 func _on_body_exited_world_bounds(body: Node3D):
-	body.queue_free()
+	if body is RigidBody3D:
+		print("Freeing ", body)
+		body.queue_free()
