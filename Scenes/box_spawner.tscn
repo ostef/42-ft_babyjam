@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5jyh86kniv1x"]
+
+[ext_resource type="PackedScene" uid="uid://dvgfebuvxk1jv" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/water/water.tscn" id="1_iy5p0"]
+
+[node name="Box_Spaner" type="Node3D"]
+transform = Transform3D(-6.735415, -1.2886593e-05, 7.3914933, 0.00012886594, 1, 0.00029177123, -7.3914933, 2.917712e-05, -6.735415, 0, 0, 0)
+
+[node name="Water" parent="." instance=ExtResource("1_iy5p0")]
+transform = Transform3D(1, -5.684342e-14, 2.9802322e-08, 0, 1, 7.275958e-12, -2.9802322e-08, -5.684342e-14, 1, 0, 0, 0)
+skeleton = NodePath("../..")

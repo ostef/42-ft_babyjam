@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dywrsh5qy41eo"]
+
+[ext_resource type="Script" uid="uid://dppaef81tq1vb" path="res://Scenes/box.gd" id="1_ego7h"]
+[ext_resource type="ArrayMesh" uid="uid://dvatem5a3yxhs" path="res://Assets/box.obj" id="2_2jyye"]
+
+[node name="Box" type="Node3D"]
+script = ExtResource("1_ego7h")
+direction = Vector3(0, 0, -1)
+float_height = 0.2
+
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0026304722, -0.094453216, 0.0009890795)
+mesh = ExtResource("2_2jyye")
