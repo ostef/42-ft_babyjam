@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ea4lq70g4oui"
 path.s3tc="res://.godot/imported/decal_bloodsplash_2.png-d0e97059beae1e31e087b37baac76143.s3tc.ctex"
+path.etc2="res://.godot/imported/decal_bloodsplash_2.png-d0e97059beae1e31e087b37baac76143.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/animation/PolyBlocks/EffectBlocks/source_files/textures/decals/decal_bloodsplash_2.png"
-dest_files=["res://.godot/imported/decal_bloodsplash_2.png-d0e97059beae1e31e087b37baac76143.s3tc.ctex"]
+dest_files=["res://.godot/imported/decal_bloodsplash_2.png-d0e97059beae1e31e087b37baac76143.s3tc.ctex", "res://.godot/imported/decal_bloodsplash_2.png-d0e97059beae1e31e087b37baac76143.etc2.ctex"]
 
 [params]
 

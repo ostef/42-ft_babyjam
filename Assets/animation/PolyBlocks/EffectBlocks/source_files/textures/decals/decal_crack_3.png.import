@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b01163xmgmypi"
 path.s3tc="res://.godot/imported/decal_crack_3.png-2d1645cec44a0d0f716cba1e624fff29.s3tc.ctex"
+path.etc2="res://.godot/imported/decal_crack_3.png-2d1645cec44a0d0f716cba1e624fff29.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/animation/PolyBlocks/EffectBlocks/source_files/textures/decals/decal_crack_3.png"
-dest_files=["res://.godot/imported/decal_crack_3.png-2d1645cec44a0d0f716cba1e624fff29.s3tc.ctex"]
+dest_files=["res://.godot/imported/decal_crack_3.png-2d1645cec44a0d0f716cba1e624fff29.s3tc.ctex", "res://.godot/imported/decal_crack_3.png-2d1645cec44a0d0f716cba1e624fff29.etc2.ctex"]
 
 [params]
 

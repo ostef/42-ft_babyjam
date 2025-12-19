@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bipatrhnuw07x"
 path.s3tc="res://.godot/imported/muzzleflash_1.png-b4dc5a63bc6195f9044da8e52880a48a.s3tc.ctex"
+path.etc2="res://.godot/imported/muzzleflash_1.png-b4dc5a63bc6195f9044da8e52880a48a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/animation/PolyBlocks/EffectBlocks/source_files/textures/muzzleflash/muzzleflash_1.png"
-dest_files=["res://.godot/imported/muzzleflash_1.png-b4dc5a63bc6195f9044da8e52880a48a.s3tc.ctex"]
+dest_files=["res://.godot/imported/muzzleflash_1.png-b4dc5a63bc6195f9044da8e52880a48a.s3tc.ctex", "res://.godot/imported/muzzleflash_1.png-b4dc5a63bc6195f9044da8e52880a48a.etc2.ctex"]
 
 [params]
 
