@@ -1,4 +1,4 @@
-extends Node3D
+class_name Canon extends Node3D
 
 @onready var explosion = $Stand/Canon/ExplosionLight
 @onready var muzzle = $MuzzleFlash_1

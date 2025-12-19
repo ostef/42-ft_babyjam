@@ -15,8 +15,9 @@ func add_mult(amount: int):
 	
 func set_best_score(new_best: int):
 	if best_score < new_best:
-		best_score_update.emit(new_best - best_score)
 		best_score = new_best
+		best_score_update.emit(new_best)
+		print("New bestscore = ", new_best)
 
 func reset_score():
 	score = 0

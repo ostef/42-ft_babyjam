@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0juyp2qu4f62"]
+[gd_scene load_steps=20 format=3 uid="uid://c0juyp2qu4f62"]
 
 [ext_resource type="PackedScene" uid="uid://dyg2xat68hlsg" path="res://Scenes/Cannon.tscn" id="2_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://dk0icbby8c6dx" path="res://Scenes/Ramp.tscn" id="4_fuudy"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ch8if18pjiego" path="res://Scenes/Plank.tscn" id="8_5rrr5"]
 [ext_resource type="PackedScene" uid="uid://cvryhi7q76aqn" path="res://Scenes/RodBumper.tscn" id="9_esopp"]
 [ext_resource type="PackedScene" uid="uid://cy6r8ngsqkkkf" path="res://Scenes/jumper.tscn" id="11_esopp"]
+[ext_resource type="PackedScene" uid="uid://dvgfebuvxk1jv" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/water/water.tscn" id="13_fhlu0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xylue"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -112,10 +113,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 4, 3.5, -12)
 
 [node name="Almond" parent="Bumpers" instance=ExtResource("7_ienac")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.5, 0.196, 7.7)
+transform = Transform3D(0.7478676, 1.0357911e-06, 0.6638479, -7.541912e-07, 1, -7.106373e-07, -0.6638479, 3.079549e-08, 0.7478676, -4.5, 0.196, 7.7)
 
 [node name="Almond2" parent="Bumpers" instance=ExtResource("7_ienac")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 4.5, 0.196, 7.7)
+transform = Transform3D(-0.74866647, -1.0567492e-06, 0.66294676, -7.699027e-07, 1, 7.245653e-07, -0.66294676, 3.205605e-08, -0.74866647, 4.5, 0.196, 7.7)
 
 [node name="Almond4" parent="Bumpers" instance=ExtResource("7_ienac")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 3.5, -6)
@@ -135,58 +136,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9949026, -2.8158029e-06, 3.
 [node name="RodBumper3" parent="Bumpers" instance=ExtResource("9_esopp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.239398, 6.0047045e-05, 0.27548003)
 
-[node name="Plank" parent="." instance=ExtResource("8_5rrr5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.405, 0.50002784, 2.4026804)
+[node name="Plank" parent="Bumpers" instance=ExtResource("8_5rrr5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.405, 0.5000198, 2.8648872)
 
-[node name="Plank2" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank2" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.448, 0.5000637, 1.8490216)
 
-[node name="Plank3" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank3" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7182996, 0.49999568, -3.4553323)
 
-[node name="Plank4" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank4" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9653959, 0.49999568, -3.4553323)
 
-[node name="Bumper3" parent="." instance=ExtResource("6_ienac")]
+[node name="Bumper3" parent="Bumpers" instance=ExtResource("6_ienac")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, -2.6151538e-05, 0, 2.6151538e-05, 1.5, 6.709081, 0.2780329, -3.8872144)
 
-[node name="Plank5" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank5" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3.7, -14.5)
 
-[node name="Plank6" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank6" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3.7, -14.5)
 
-[node name="Plank7" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank7" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.415, 3.699992, -9.527103)
 
-[node name="Plank8" parent="." instance=ExtResource("8_5rrr5")]
+[node name="Plank8" parent="Bumpers" instance=ExtResource("8_5rrr5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.449, 3.6999922, -9.54844)
+
+[node name="RodBumper4" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021687746, 3.3851483, -3.8447268)
+
+[node name="RodBumper5" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0418043, 3.3852603, -10.275425)
+
+[node name="RodBumper7" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.922677, 3.3850217, -10.241637)
+
+[node name="RodBumper8" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06350541, 3.3850667, -12.824667)
+
+[node name="Plank9" parent="Bumpers" instance=ExtResource("8_5rrr5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.449, 3.699893, -3.859874)
+
+[node name="RodBumper9" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8657694, 4.720037e-05, 0.16447592)
+
+[node name="RodBumper10" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6800885, 3.756261e-05, 1.5651422)
+
+[node name="RodBumper11" parent="Bumpers" instance=ExtResource("9_esopp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1680403, -6.4275795e-05, 5.984167)
 
 [node name="Jumper2" parent="." instance=ExtResource("11_esopp")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -0.116405666, 0.0720657, 2.6498187)
 
-[node name="RodBumper" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021687746, 3.3851483, -3.8447268)
+[node name="water" type="Node3D" parent="."]
 
-[node name="RodBumper2" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0418043, 3.3852603, -10.275425)
-
-[node name="RodBumper3" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.922677, 3.3850217, -10.241637)
-
-[node name="RodBumper6" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06350541, 3.3850667, -12.824667)
-
-[node name="Plank9" parent="." instance=ExtResource("8_5rrr5")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.449, 3.699893, -3.859874)
-
-[node name="RodBumper4" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8657694, 4.720037e-05, 0.16447592)
-
-[node name="RodBumper5" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6800885, 3.756261e-05, 1.5651422)
-
-[node name="RodBumper7" parent="." instance=ExtResource("9_esopp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1680403, -6.4275795e-05, 5.984167)
+[node name="Water" parent="." instance=ExtResource("13_fhlu0")]
+transform = Transform3D(-6.735415, -1.2886593e-05, 7.3914933, 0.00012886594, 1, 0.00029177123, -7.3914933, 2.917712e-05, -6.735415, 0.0008201599, -1.0832214, -0.024879267)
 
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]

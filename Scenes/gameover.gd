@@ -18,3 +18,4 @@ func _process(delta: float) -> void:
 	if visible == true:
 		if Input.is_action_just_pressed("enter"):
 			GameManager.reset()
+			visible = false

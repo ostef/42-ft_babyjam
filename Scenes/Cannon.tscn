@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b811lwp060mex" path="res://Assets/animation/PolyBlocks/EffectBlocks/assets/muzzle_flash/muzzle_flash_1.tscn" id="7_bcdaw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w04vy"]
-load_path = "res://.godot/imported/normal.jpg-4302c4aa3e5a20eaac60a354553ffa10.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w04vy"]
 albedo_color = Color(0.16206557, 0.1620656, 0.16206557, 1)
@@ -92,7 +91,7 @@ mesh = ExtResource("4_prjab")
 surface_material_override/0 = ExtResource("4_bcdaw")
 
 [node name="Canon" type="MeshInstance3D" parent="Stand"]
-transform = Transform3D(1, 0, 0, 0, 0.9988589, -0.047751483, 0, 0.047751483, 0.9988589, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99885887, -0.04775148, 0, 0.04775148, 0.99885887, 0, 0, 0)
 mesh = ExtResource("3_4l5vp")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_w04vy")

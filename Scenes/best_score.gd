@@ -5,4 +5,4 @@ func _ready() -> void:
 	self.text = "%s" % Scoring.best_score
 	
 func update(_amount: int):
-	self.text = "%s" % Scoring.best_score
+	self.text = "%s" % _amount
